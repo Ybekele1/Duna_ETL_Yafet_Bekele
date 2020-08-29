@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="8/10/2020 7:43:50 PM"
+  DTS:CreationDate="8/28/2020 5:40:15 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-04FDTDC"
   DTS:CreatorName="DESKTOP-04FDTDC\yafet"
-  DTS:DTSID="{057FAD1C-1BC0-48E4-B4AB-EEB899B07F8A}"
+  DTS:DTSID="{75144F79-510A-4182-96D9-64D6D8E00F8C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.123"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="Pkg_Yafet_Bekele_UberWriter"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{E01D7F07-8685-441A-879A-A40D893BF93B}">
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{BB883D1F-2FA6-496A-A77D-90007B054E26}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -24,20 +24,5 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
-  <Package
-    design-time-name="Package">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <AnnotationLayout
-          Text="One Change"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="94.6666666666667,40"
-          Id="279db128-b143-4283-8f11-a0e76412bbbf"
-          TopLeft="64.3749990407377,32.4999994188547" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
