@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/28/2020 5:06:01 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_Yafet_Bekele_LendingQB"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{4270B10F-3987-4FF1-B404-E3DB829910B8}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{A88A6C2B-2438-4096-B965-1E9D93616B9B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -8038,6 +8038,12 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UnderwriterRiskAssess]"
+                      cachedDataType="nText"
+                      cachedName="UnderwriterRiskAssess"
+                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnderwriterRiskAssess]"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[UnderwriterRiskAssess]" />
+                    <inputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CloserFirstName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -8757,14 +8763,6 @@
                       cachedScale="10"
                       externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BottomQualificationRatios]"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of BottomQualificationRatios]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Copy of UnderwriterRiskAssess]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of Copy of UnderwriterRiskAssess"
-                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnderwriterRiskAssess]"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of UnderwriterRiskAssess]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">

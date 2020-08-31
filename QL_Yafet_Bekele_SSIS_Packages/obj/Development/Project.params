@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+  <SSIS:Parameter
+    SSIS:Name="Par_LendingQB_ConnectionString">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{25f0974f-e074-4aaf-9fc8-c2ac4f5ca0c1}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">Service Document Url=https://dunatkcom.sharepoint.com/sites/LendingQB/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;Cookie="SPOIDCRL=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjgsMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwNDUzOWU4OWZAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfHNoYXJlcG9pbnRAZHVuYXRrLmNvbSwxMzI0MzEzODkyOTAwMDAwMDAsMTMyNDIxNzU3MDQwMDAwMDAwLDEzMjQzMjI1MzI5OTc5MjY0NiwwLjAuMC4wLDQsODVkZGY3ZTktODA2OC00YmI2LTg5NzktNDQ3NjE0NDJlMzlhLCwsZGVhMDc0OWYtYzA0Zi0wMDAwLTQ3MTItYzU2N2JjY2VkZjQ3LGRlYTA3NDlmLWMwNGYtMDAwMC00NzEyLWM1NjdiY2NlZGY0NywsMCwwLDAsLCwsMjY1MDQ2Nzc0Mzk5OTk5OTk5OSwwLCxHMUQ3V3Y3Rm1lN2Q0bHU4UW02VHdBQS9iV0lEZHNpSUpselFMUnhpVFBvK0pOcS9iMGxKZ2R1Q3RaRVdwVEtJSFNBazBBQmxMM1BNdTZVWXRITHFtOVpSNi8yQjRIbHA5dmZ1N1ZhRlUxOW13eklqbmYrckZESmg4YmE0VzNaRkdGVEI3VE1zaDRlMU9QbVZTWVVoMjdjSTk4bmRUWkJyWldZaEtRTWV4Uk9KZk9qUXhpM2U1aEs5ZzZDaWQ1aHlaeDJiSG8wLzE0bWRNRGk4TEIrMXBZM3J3bGFhaG9qRk52dUF2UmtkN2R2cjJGdTZBcWlQZFpKcW5mMVBnc05VMFl4NXNCdm5Md3NXa2pOUHZLMHh0QzJqOGthb1djYzBwOVFjeTNlZEpCZCtrb0FxTFY1NEdjbTR6VEZWTmdWb2ZFMk90OHJhQ3g1YTlPS3JnYVdLZWc9PTwvU1A+";User ID=sharepoint@dunatk.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+</SSIS:Parameters>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/28/2020 5:34:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-04FDTDC"
+  DTS:CreatorName="DESKTOP-04FDTDC\yafet"
+  DTS:DTSID="{60F11220-9CEF-46EC-9D2F-E45017C758BE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Pkg_Yafet_Bekele_QuickenLoan"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{B7B70B8E-FF06-4B56-B1DB-F7FAAA1B74F8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
