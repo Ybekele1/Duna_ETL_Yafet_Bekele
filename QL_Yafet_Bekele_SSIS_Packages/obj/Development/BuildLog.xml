@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>QL_Yafet_Bekele_SSIS_Packages</Name>
-    <LastWriteTime>2020-09-03T19:41:05.5849528Z</LastWriteTime>
+    <LastWriteTime>2020-09-04T01:59:51.4102952Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_LendingQB.dtsx</Name>
-      <LastWriteTime>2020-09-03T19:10:03.1164684Z</LastWriteTime>
+      <LastWriteTime>2020-09-04T04:32:59.4475919Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
