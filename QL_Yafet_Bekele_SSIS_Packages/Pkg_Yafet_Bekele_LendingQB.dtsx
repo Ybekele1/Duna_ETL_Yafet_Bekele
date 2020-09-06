@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_Yafet_Bekele_LendingQB"
   DTS:PackageType="5"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{354025C6-3AA1-4381-8D3F-9A013FAD7107}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{1EDC7AEC-1566-4D25-8AE3-34D23F7AA6AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,15 +49,6 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6D5F629A-B45C-4DD4-B0E9-F5911CC7D9C4}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="varGetMaxModifiedDate">
-      <DTS:VariableValue
-        DTS:DataType="7">9/4/2020 8:39:49 PM</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{121F59A6-2D14-4605-882D-CF8920B2DA19}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -67,12 +58,12 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9B29DFAB-EB93-45B7-AC6F-F763C5F4898E}"
+      DTS:DTSID="{B08D8484-D542-461A-906B-FA6FCB2CE170}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="varMaxModifiedDate">
+      DTS:ObjectName="varLastModifiedDate">
       <DTS:VariableValue
-        DTS:DataType="7">9/1/2020 5:01:10 PM</DTS:VariableValue>
+        DTS:DataType="7">9/5/2020 9:42:14 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -108,7 +99,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSmtpClient">
       <DTS:VariableValue
-        DTS:DataType="8">smtp@gmail.com</DTS:VariableValue>
+        DTS:DataType="8">smtp.gmail.com</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -141,11 +132,13 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{5E9E944A-0702-4832-BF7A-9D9180EA2E3A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varTimerStamp">
       <DTS:VariableValue
-        DTS:DataType="7">8/31/2020 4:56:00 PM</DTS:VariableValue>
+        DTS:DataType="7">9/6/2020 1:49:14 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -168,89 +161,6 @@
       DTS:ObjectName="Data Flow Task_Sharepoint_Oata"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
-      <DTS:EventHandlers>
-        <DTS:EventHandler
-          DTS:refId="Package\Data Flow Task_Sharepoint_Oata.EventHandlers[OnError]"
-          DTS:CreationName="OnError"
-          DTS:DTSID="{0C90DD5C-4D1B-4F7E-8F0A-D154BC08F959}"
-          DTS:EventID="0"
-          DTS:EventName="OnError"
-          DTS:LocaleID="-1">
-          <DTS:Variables>
-            <DTS:Variable
-              DTS:CreationName=""
-              DTS:Description="The propagate property of the event"
-              DTS:DTSID="{7D075644-AA65-402A-A626-DD290A456070}"
-              DTS:IncludeInDebugDump="6789"
-              DTS:Namespace="System"
-              DTS:ObjectName="Propagate">
-              <DTS:VariableValue
-                DTS:DataType="11">-1</DTS:VariableValue>
-            </DTS:Variable>
-          </DTS:Variables>
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\Data Flow Task_Sharepoint_Oata.EventHandlers[OnError]\Execute SQL Task"
-              DTS:CreationName="Microsoft.ExecuteSQLTask"
-              DTS:Description="Execute SQL Task"
-              DTS:DTSID="{1BC66E64-5309-4F1A-BB44-46B19621776C}"
-              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Execute SQL Task"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{19466C42-F4ED-4C7A-8434-97D4CD9BE1E2}"
-                  SQLTask:SqlStatementSource=" INSERT INTO Quicken_Loans_ETL_Error_Log(PackageID,PackageName,SourceName,LoadDate,RunBy,ErrorCode,ErrorDescription) Values (?,?,?,?,?,?,?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="0"
-                    SQLTask:DtsVariableName="System::PackageID"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="72"
-                    SQLTask:ParameterSize="-1" />
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="1"
-                    SQLTask:DtsVariableName="System::PackageName"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="129"
-                    SQLTask:ParameterSize="-1" />
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="2"
-                    SQLTask:DtsVariableName="System::SourceName"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="129"
-                    SQLTask:ParameterSize="-1" />
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="3"
-                    SQLTask:DtsVariableName="User::varTimerStamp"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="7"
-                    SQLTask:ParameterSize="-1" />
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="4"
-                    SQLTask:DtsVariableName="System::MachineName"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="129"
-                    SQLTask:ParameterSize="-1" />
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="5"
-                    SQLTask:DtsVariableName="System::ErrorCode"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="129"
-                    SQLTask:ParameterSize="-1" />
-                  <SQLTask:ParameterBinding
-                    SQLTask:ParameterName="6"
-                    SQLTask:DtsVariableName="System::ErrorDescription"
-                    SQLTask:ParameterDirection="Input"
-                    SQLTask:DataType="129"
-                    SQLTask:ParameterSize="-1" />
-                </SQLTask:SqlTaskData>
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-        </DTS:EventHandler>
-      </DTS:EventHandlers>
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -5631,19 +5541,17 @@
                       cachedName="FinallCreditScore"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[FinallCreditScore]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Inputs[Derived Column Input].Columns[Copy of Copy of LeadSource]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="225"
-                      cachedName="Copy of Copy of LeadSource"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]" />
-                    <inputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Inputs[Derived Column Input].Columns[Copy of Copy of Underwriter_Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="128"
                       cachedName="Copy of Copy of Underwriter_Name"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of Underwriter_Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Inputs[Derived Column Input].Columns[LeadSource]"
+                      cachedDataType="nText"
+                      cachedName="LeadSource"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5907,13 +5815,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,255,1252)([FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"Dunatek",1) &gt; 0 ? "Dunatek" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"IBX",1) &gt; 0 ? "IBX" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"Fusion",1) &gt; 0 ? "Fusion" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"Leadpoint",1) &gt; 0 ? "Leadpoint" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"HARP",1) &gt; 0 ? "HARP" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"Bills",1) &gt; 0 ? "Bills" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"VA Loan",1) &gt; 0 ? "VA Loan" : [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},"Military",1) &gt; 0 ? "Military" : #{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]} == "  " ? "Dunatek" : [REPLACE](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LeadSource]},".com","   "))</property>
+                          name="Expression">(DT_STR,255,1252)([ISNULL]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]}) ? "Dunatek" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"Dunatek",1) &gt; 0 ? "Dunatek" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"IBX",1) &gt; 0 ? "IBX" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"Fusion",1) &gt; 0 ? "Fusion" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"HARP",1) &gt; 0 ? "HARP" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"Bills",1) &gt; 0 ? "Bills" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"VA Loan",1) &gt; 0 ? "VA Loan" : [FINDSTRING]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},"Military",1) &gt; 0 ? "Military" : [REPLACE]((DT_WSTR,255)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LeadSource]},".com",""))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,255,1252)(FINDSTRING([Copy of Copy of LeadSource],"Dunatek",1) &gt; 0 ? "Dunatek" : FINDSTRING([Copy of Copy of LeadSource],"IBX",1) &gt; 0 ? "IBX" : FINDSTRING([Copy of Copy of LeadSource],"Fusion",1) &gt; 0 ? "Fusion" : FINDSTRING([Copy of Copy of LeadSource],"Leadpoint",1) &gt; 0 ? "Leadpoint" : FINDSTRING([Copy of Copy of LeadSource],"HARP",1) &gt; 0 ? "HARP" : FINDSTRING([Copy of Copy of LeadSource],"Bills",1) &gt; 0 ? "Bills" : FINDSTRING([Copy of Copy of LeadSource],"VA Loan",1) &gt; 0 ? "VA Loan" : FINDSTRING([Copy of Copy of LeadSource],"Military",1) &gt; 0 ? "Military" : [Copy of Copy of LeadSource] == "  " ? "Dunatek" : REPLACE([Copy of Copy of LeadSource],".com","   "))</property>
+                          name="FriendlyExpression">(DT_STR,255,1252)(ISNULL((DT_WSTR,255)LeadSource) ? "Dunatek" : FINDSTRING((DT_WSTR,255)LeadSource,"Dunatek",1) &gt; 0 ? "Dunatek" : FINDSTRING((DT_WSTR,255)LeadSource,"IBX",1) &gt; 0 ? "IBX" : FINDSTRING((DT_WSTR,255)LeadSource,"Fusion",1) &gt; 0 ? "Fusion" : FINDSTRING((DT_WSTR,255)LeadSource,"HARP",1) &gt; 0 ? "HARP" : FINDSTRING((DT_WSTR,255)LeadSource,"Bills",1) &gt; 0 ? "Bills" : FINDSTRING((DT_WSTR,255)LeadSource,"VA Loan",1) &gt; 0 ? "VA Loan" : FINDSTRING((DT_WSTR,255)LeadSource,"Military",1) &gt; 0 ? "Military" : REPLACE((DT_WSTR,255)LeadSource,".com",""))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -21765,6 +21673,33 @@ where [refTable].[MarketSourceCode] = ?</property>
                   name="Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentTypeID]"
+                      name="ContentTypeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Title]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Title]"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LastLoadDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -22575,6 +22510,15 @@ where [refTable].[MarketSourceCode] = ?</property>
                       name="Id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentType]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[ContentType]"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Modified]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -22582,6 +22526,15 @@ where [refTable].[MarketSourceCode] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Modified]"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Modified]"
                       name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Created]"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Created]"
+                      name="Created"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[CreatedById]"
@@ -22611,47 +22564,23 @@ where [refTable].[MarketSourceCode] = ?</property>
                       name="Owshiddenversion"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentTypeID]"
-                      dataType="nText"
-                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[ContentTypeID]"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentTypeID]"
-                      name="ContentTypeID" />
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Title]"
-                      dataType="nText"
-                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Title]"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Title]"
-                      name="Title" />
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ComplianceAssetId]"
-                      dataType="nText"
-                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[ComplianceAssetId]"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ComplianceAssetId]"
-                      name="ComplianceAssetId" />
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentType]"
-                      dataType="nText"
-                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[ContentType]"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[ContentType]"
-                      name="ContentType" />
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Created]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Created]"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Created]"
-                      name="Created" />
-                    <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Version]"
                       dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Version]"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Version]"
-                      name="Version" />
+                      name="Version"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Path]"
                       dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].ExternalColumns[Path]"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Path]"
-                      name="Path" />
+                      name="Path"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -25052,54 +24981,6 @@ where [refTable].[MarketSourceCode] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{FF2DDCF3-1BFE-4D42-952B-ACDF2D5E7CA6}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
-          SQLTask:SqlStatementSource="Select SourceName, Max(LastModifiedDate) as MaxModifiedDate from Stg_Yafet_Bekele_ql where Sourcename=? Group by SourceName"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="SourceName"
-            SQLTask:DtsVariableName="User::varSourceName" />
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="MaxModifiedDate"
-            SQLTask:DtsVariableName="User::varGetMaxModifiedDate" />
-          <SQLTask:ParameterBinding
-            SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="User::varSourceName"
-            SQLTask:ParameterDirection="Input"
-            SQLTask:DataType="129"
-            SQLTask:ParameterSize="-1" />
-        </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute SQL Task 1"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{47B74765-BBDD-4538-819E-D17CDE551E61}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task 1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
-          SQLTask:SqlStatementSource="Delete from STG_Yafet_Bekele_QL " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Execute SQL Task_ ETLLogTable"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -25146,13 +25027,13 @@ where [refTable].[MarketSourceCode] = ?</property>
             SQLTask:ParameterSize="-1" />
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="5"
-            SQLTask:DtsVariableName="User::varRowCount"
+            SQLTask:DtsVariableName="User::varNumberOfRowsInserted"
             SQLTask:ParameterDirection="Input"
-            SQLTask:DataType="129"
+            SQLTask:DataType="131"
             SQLTask:ParameterSize="-1" />
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="6"
-            SQLTask:DtsVariableName="User::varMaxModifiedDate"
+            SQLTask:DtsVariableName="User::varLastModifiedDate"
             SQLTask:ParameterDirection="Input"
             SQLTask:DataType="7"
             SQLTask:ParameterSize="-1" />
@@ -25160,21 +25041,42 @@ where [refTable].[MarketSourceCode] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Script Task"
-      DTS:CreationName="Microsoft.ScriptTask"
-      DTS:Description="Script Task"
-      DTS:DTSID="{549B5F91-F9F1-4CBC-9CA9-72427A26D8C7}"
-      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:refId="Package\Execute SQL Task_Delete_Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{47B74765-BBDD-4538-819E-D17CDE551E61}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Script Task"
+      DTS:ObjectName="Execute SQL Task_Delete_Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
-        <ScriptProject
-          Name="ST_e68e127c332a48d9972e8626f716e3b5"
-          VSTAMajorVersion="15"
-          VSTAMinorVersion="0"
-          Language="CSharp" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
+          SQLTask:SqlStatementSource="Delete from STG_Yafet_Bekele_QL " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task_MaxModifiedDate"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FF2DDCF3-1BFE-4D42-952B-ACDF2D5E7CA6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task_MaxModifiedDate"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
+          SQLTask:SqlStatementSource="SELECT MAX(LastModifiedDate) AS MaxLastModifiedDate&#xA;    FROM  [dbo].[Stg_Yafet_Bekele_QL]    &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="MaxLastModifiedDate"
+            SQLTask:DtsVariableName="User::varLastModifiedDate" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -25182,35 +25084,27 @@ where [refTable].[MarketSourceCode] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{22B65921-195C-4378-9496-5B32F34826ED}"
-      DTS:From="Package\Data Flow Task_Sharepoint_Oata"
+      DTS:DTSID="{DA94FD10-2F22-4567-AD88-3AEDF33BE601}"
+      DTS:From="Package\Execute SQL Task_MaxModifiedDate"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Execute SQL Task_ ETLLogTable" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{8814FB8F-FF72-4597-AA8A-BDCC29563893}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:DTSID="{17D02CB5-CACA-4901-860E-2A0C0499054C}"
+      DTS:From="Package\Data Flow Task_Sharepoint_Oata"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Execute SQL Task 1" />
+      DTS:To="Package\Execute SQL Task_MaxModifiedDate" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
       DTS:DTSID="{EC174D27-5BED-40EC-8B44-84647ABCA1EA}"
-      DTS:From="Package\Execute SQL Task 1"
+      DTS:From="Package\Execute SQL Task_Delete_Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Data Flow Task_Sharepoint_Oata" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
-      DTS:CreationName=""
-      DTS:DTSID="{31CC70CE-47BF-47D1-9AD1-1F614C771DC7}"
-      DTS:From="Package\Execute SQL Task_ ETLLogTable"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 3"
-      DTS:To="Package\Script Task" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -25234,19 +25128,19 @@ where [refTable].[MarketSourceCode] = ?</property>
       </DTS:Variables>
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task_ERROR_LOG"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{72BB1562-B07C-4C34-AC49-6FC2C4CA84CF}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Execute SQL Task"
+          DTS:ObjectName="Execute SQL Task_ERROR_LOG"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{19466C42-F4ED-4C7A-8434-97D4CD9BE1E2}"
-              SQLTask:SqlStatementSource="INSERT INTO Quicken_Lones_ETL_Error_Log VALUES (?,?,?,?,?,?,?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              SQLTask:SqlStatementSource="INSERT INTO Quicken_Loans_ETL_Error_Log VALUES (?,?,?,?,?,?,?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
                 SQLTask:DtsVariableName="System::PackageID"
@@ -25261,7 +25155,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                 SQLTask:ParameterSize="-1" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="2"
-                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:DtsVariableName="User::varSourceName"
                 SQLTask:ParameterDirection="Input"
                 SQLTask:DataType="129"
                 SQLTask:ParameterSize="-1" />
@@ -25292,7 +25186,680 @@ where [refTable].[MarketSourceCode] = ?</property>
             </SQLTask:SqlTaskData>
           </DTS:ObjectData>
         </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Script Task"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="Script Task"
+          DTS:DTSID="{16a9e923-a8be-4a77-96b0-c04d5324193d}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Script Task">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_71d496f250554f6da0535859ba3d2ce7"
+              VSTAMajorVersion="15"
+              VSTAMinorVersion="0"
+              Language="CSharp"
+              ReadOnlyVariables="System::PackageName,User::varFromEmail,User::varPassword,User::varSmtpClient,User::varSmtpServerPort,User::varSubject,User::varToEmail"
+              ReadWriteVariables="System::ErrorCode,System::ErrorDescription,User::varTimerStamp">
+              <ProjectItem
+                Name="Properties\Resources.resx"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Settings.get_Default():ST_e68e127c332a48d9972e8626f716e3b5.Properties.Sett" +
+    "ings")]
+
+namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
+                Name="ScriptMain.cs"
+                Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+#endregion
+
+namespace ST_e68e127c332a48d9972e8626f716e3b5
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+		/// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+		public void Main()
+		{
+            // TODO: Add your code here
+            //System::PackageName,User::varFromEmail,User::varPassword,User::varSmtpClient,User::varSmtpServerPort,User::varSubject,User::varToEmail
+            String SendMailTo = Dts.Variables["User::varToEmail"].Value.ToString();
+            String SendMailFrom = Dts.Variables["User::varFromEmail"].Value.ToString();
+            String SendMailSubject = Dts.Variables["User::varSubject"].Value.ToString();
+            String SendMailBody = Dts.Variables["System::PackageName"].Value.ToString() + " " + Dts.Variables["System::ErrorCode"].Value.ToString() + " " + Dts.Variables["System::ErrorDescription"].Value.ToString() + " " + Dts.Variables["User::varTimerStamp"].Value.ToString();
+            String SmtpClient = Dts.Variables["User::varSmtpClient"].Value.ToString();
+            String Password = Dts.Variables["User::varPassword"].Value.ToString();
+            String Pt = Dts.Variables["User::varSmtpServerPort"].Value.ToString();
+            int Port = int.Parse(Pt);
+            try
+            {
+                MailMessage email = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient(SmtpClient);
+                // START
+                email.To.Add(SendMailTo);
+                email.From = new MailAddress(SendMailFrom);
+                email.Subject = SendMailSubject;
+                email.Body = SendMailBody;
+                //END
+                SmtpServer.Port = Port;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(SendMailFrom, Password);
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(email);
+                MessageBox.Show("Email was successfully Sent");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            Dts.TaskResult = (int)ScriptResults.Success;
+
+		}
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+}]]></ProjectItem>
+              <ProjectItem
+                Name="ST_71d496f250554f6da0535859ba3d2ce7.csproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF51C767-4711-4CD3-82B5-AD907224C8AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_e68e127c332a48d9972e8626f716e3b5</RootNamespace>
+    <AssemblyName>ST_71d496f250554f6da0535859ba3d2ce7</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptTask" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_71d496f250554f6da0535859ba3d2ce7</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_71d496f250554f6da0535859ba3d2ce7</msb:DisplayName>
+    <msb:ProjectId>{E1188250-3ED0-4392-820A-0EAE80B95AF2}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_71d496f250554f6da0535859ba3d2ce7.csproj" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e68e127c332a48d9972e8626f716e3b5")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_e68e127c332a48d9972e8626f716e3b5")]
+[assembly: AssemblyCopyright("Copyright @  2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Resources.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_e68e127c332a48d9972e8626f716e3b5.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <BinaryItem
+                Name="ST_71d496f250554f6da0535859ba3d2ce7.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJcZVF8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAARjMA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAPQyAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAATBMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAo
+MwAAAAAAAEgAAAACAAUAzCIAAHAPAAABAAAAAAAAADwyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBQD3AQAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACm8T
+AAAKbxQAAAoKAigQAAAKbxEAAApyIwAAcG8SAAAKbxMAAApvFAAACgsCKBAAAApvEQAACnJJAABw
+bxIAAApvEwAACm8UAAAKDB2NHQAAASUWAigQAAAKbxEAAApyawAAcG8SAAAKbxMAAApvFAAACqIl
+F3KTAABwoiUYAigQAAAKbxEAAApylwAAcG8SAAAKbxMAAApvFAAACqIlGXKTAABwoiUaAigQAAAK
+bxEAAApyuwAAcG8SAAAKbxMAAApvFAAACqIlG3KTAABwoiUcAigQAAAKbxEAAApy7QAAcG8SAAAK
+bxMAAApvFAAACqIoFQAACg0CKBAAAApvEQAACnIVAQBwbxIAAApvEwAACm8UAAAKEwQCKBAAAApv
+EQAACnI9AQBwbxIAAApvEwAACm8UAAAKEwUCKBAAAApvEQAACnJhAQBwbxIAAApvEwAACm8UAAAK
+KBYAAAoTBnMXAAAKEwcRBHMYAAAKEQdvGQAACgZvGgAAChEHB3MbAAAKbxwAAAoRBwhvHQAAChEH
+CW8eAAAKJREGbx8AAAolBxEFcyAAAApvIQAACiUXbyIAAAoRB28jAAAKcpEBAHAoJAAACibeDW8U
+AAAKKCQAAAom3gACKBAAAAoWbyUAAAoqAAEQAAAAAHQBad0BDRAAAAEeAigmAAAKKh4CKCcAAAoq
+rn4BAAAELR5yyQEAcNADAAACKCgAAApvKQAACnMqAAAKgAEAAAR+AQAABCoafgIAAAQqHgKAAgAA
+BCoafgMAAAQqHgIoKwAACioucwgAAAaAAwAABCoAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
+AAAAAAUAbAAAAHQEAAAjfgAA4AQAAJwGAAAjU3RyaW5ncwAAAAB8CwAAPAIAACNVUwC4DQAAEAAA
+ACNHVUlEAAAAyA0AAKgBAAAjQmxvYgAAAAAAAAACAAABVx2iAQkDAAAA+gEzABYAAAEAAAAoAAAA
+BQAAAAYAAAAJAAAAAQAAACsAAAACAAAAEAAAAAEAAAACAAAAAwAAAAQAAAABAAAABQAAAAEAAAAB
+AAAAAADcAwEAAAAAAAYAagLqBAYA+QLqBAYAtgHXBA8AXgUAAAYA4wFxBAYATQJxBAYALgJxBAYA
+4AJxBAYAigJxBAYAowJxBAYA+gFxBAYAFQInAwoAvgJpAwoALwFpAw4AoQDMAwYAmQQbBAYAKwQb
+BAYAmQHXBAYACQYbBAYAugQKBQYAqgRcBA4AaQG2Aw4AygG2Aw4ASwFHBAYAfgHqBAoApANpAxIA
+oAXaABIArQDaAAYAQwMbBAYAAQAbBA4ATwbMAw4AgwTMAw4A4AXMAw4AkgMcBg4AYwYcBhYAewbD
+BRYAMwbDBQYA+gAbBAYAtgAbBAYAkwZxBAAAAABPAAAAAAABAAEAAQAQADwEBwA5AAEAAQAAABAA
+EQVtBU0AAQADAAABEACqBW0FYQADAAcAAwEAAPQFAABFAAQACgARADAEqQARAB8BrQARAJEAsQAG
+BncAtQBWgNgFuABWgP8AuABQIAAAAACGAEIEBgABAGQiAAAAAIYYygQGAAEAbCIAAAAAgxjKBAYA
+AQB0IgAAAACTCLYEvAABAKAiAAAAAJMIBwHBAAEApyIAAAAAkwgTAcYAAQCvIgAAAACWCCcGzAAC
+ALYiAAAAAIYYygQGAAIAviIAAAAAkRjQBNEAAgAAAAEAIQMJAMoEAQARAMoEBgAZAMoECgApAMoE
+EAAxAMoEEAA5AMoEEABBAMoEEABJAMoEEABRAMoEEABZAMoEEABhAMoEEABpAMoEBgCRAMoEBgC5
+AMoEFQDJAMoEBgBxAOwFJwDRAJwFLADZABIEMQDhABcDNwCZAEEDOwDpAAIGPwDxAGMBRQB5AMoE
+BgD5AMoEEAB5AKMESgABAYgAEAAJAcoEEAB5ACIEUAB5ABAGEAB5AIYGEAD5AFoGAQARAcoEVwD5
+ALMFXQD5AAQEZAD5AIwAaQAhAXYGbwDRAEAGAQBxAMoEBgCZAMoEBgAxAcgAdgAxAY8GfwChAMoE
+hQDBAMoEBgAIABQAnwAIABgApAApAHMADAEuAAsA5AAuABMA7QAuABsADAEuACMAFQEuACsAPgEu
+ADMAPgEuADsAPgEuAEMAFQEuAEsARAEuAFMAPgEuAFsAWwFDAGMApABJAHMADAFhAHsApABjAGsA
+pAAbAAMAAQAEAAMAAAC6BNUAAAAnAdoAAAArBt8AAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcABIAA
+AAEAAACBHSuGAAAAAAAAKwAAAAQAAAAAAAAAAAAAAI0AfwAAAAAADwAAAAAAAAAAAAAAlgBKAwAA
+AAAEAAAAAAAAAAAAAACNABsEAAAAAA8AAAAAAAAAAAAAAJYAWAAAAAAABAAAAAAAAAAAAAAAjQDD
+BQAAAAAAAAAAAQAAABsFAAAFAAIAAAAAAABJbnQzMgBTVF9lNjhlMTI3YzMzMmE0OGQ5OTcyZTg2
+MjZmNzE2ZTNiNQBTVF83MWQ0OTZmMjUwNTU0ZjZkYTA1MzU4NTliYTNkMmNlNwA8TW9kdWxlPgBN
+aWNyb3NvZnQuU3FsU2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBBZGQAU2VuZABk
+ZWZhdWx0SW5zdGFuY2UATWFpbE1lc3NhZ2UAVmFyaWFibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0
+VHlwZUZyb21IYW5kbGUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZQBUeXBlAEZhaWx1
+cmUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAFZTVEFSVFNjcmlwdE9i
+amVjdE1vZGVsQmFzZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBQYXJzZQBFZGl0b3JCcm93c2Fi
+bGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0
+cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2Vt
+Ymx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3
+b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2Ny
+aXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQ
+cm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNr
+RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBh
+dGliaWxpdHlBdHRyaWJ1dGUAZ2V0X1ZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25p
+bmcAVG9TdHJpbmcATWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxT
+ZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sATmV0d29ya0NyZWRlbnRpYWwAU2NyaXB0T2JqZWN0
+TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFN5c3RlbS5OZXQuTWFpbABTVF83MWQ0OTZmMjUw
+NTU0ZjZkYTA1MzU4NTliYTNkMmNlNy5kbGwAc2V0X0VuYWJsZVNzbABnZXRfSXRlbQBTeXN0ZW0A
+c2V0X0Zyb20ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9u
+AFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAE1haWxBZGRyZXNzQ29sbGVj
+dGlvbgBFeGNlcHRpb24AZ2V0X1RvAEN1bHR1cmVJbmZvAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0
+b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZp
+Y2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfZTY4ZTEyN2MzMzJhNDhkOTk3MmU4NjI2ZjcxNmUzYjUu
+UHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNUX2U2OGUxMjdj
+MzMyYTQ4ZDk5NzJlODYyNmY3MTZlM2I1LlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0aW5n
+cwBzZXRfQ3JlZGVudGlhbHMAU3lzdGVtLldpbmRvd3MuRm9ybXMAU3VjY2VzcwBNYWlsQWRkcmVz
+cwBnZXRfRHRzAFNjcmlwdFJlc3VsdHMAQ29uY2F0AE9iamVjdABzZXRfU3ViamVjdABTeXN0ZW0u
+TmV0AGdldF9EZWZhdWx0AERpYWxvZ1Jlc3VsdABzZXRfVGFza1Jlc3VsdABTbXRwQ2xpZW50AHNl
+dF9Qb3J0AElDcmVkZW50aWFsc0J5SG9zdABTaG93AE1lc3NhZ2VCb3gAc2V0X0JvZHkAZ2V0X0Fz
+c2VtYmx5AAAhVQBzAGUAcgA6ADoAdgBhAHIAVABvAEUAbQBhAGkAbAAAJVUAcwBlAHIAOgA6AHYA
+YQByAEYAcgBvAG0ARQBtAGEAaQBsAAAhVQBzAGUAcgA6ADoAdgBhAHIAUwB1AGIAagBlAGMAdAAA
+J1MAeQBzAHQAZQBtADoAOgBQAGEAYwBrAGEAZwBlAE4AYQBtAGUAAAMgAAAjUwB5AHMAdABlAG0A
+OgA6AEUAcgByAG8AcgBDAG8AZABlAAAxUwB5AHMAdABlAG0AOgA6AEUAcgByAG8AcgBEAGUAcwBj
+AHIAaQBwAHQAaQBvAG4AACdVAHMAZQByADoAOgB2AGEAcgBUAGkAbQBlAHIAUwB0AGEAbQBwAAAn
+VQBzAGUAcgA6ADoAdgBhAHIAUwBtAHQAcABDAGwAaQBlAG4AdAAAI1UAcwBlAHIAOgA6AHYAYQBy
+AFAAYQBzAHMAdwBvAHIAZAAAL1UAcwBlAHIAOgA6AHYAYQByAFMAbQB0AHAAUwBlAHIAdgBlAHIA
+UABvAHIAdAAAN0UAbQBhAGkAbAAgAHcAYQBzACAAcwB1AGMAYwBlAHMAcwBmAHUAbABsAHkAIABT
+AGUAbgB0AABxUwBUAF8AZQA2ADgAZQAxADIANwBjADMAMwAyAGEANAA4AGQAOQA5ADcAMgBlADgA
+NgAyADYAZgA3ADEANgBlADMAYgA1AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQBy
+AGMAZQBzAAAA1ikfPcz7f02PS3AvOdKQggAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQsHCA4O
+Dg4ODggSPQQgABJpBCAAEm0FIAEScRwDIAAcAyAADgUAAQ4dDgQAAQgOBSAAEoCBBiABARKAhQUg
+AgEODgYgAQESgI0EIAEBAgUgAQESPQYAARGAlQ4IAAESgJkRgJ0FIAASgKEHIAIBDhKAoQi3elxW
+GTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJRAwYSVQMGEhACBggDBhEUBAAAElEEAAASVQUAAQES
+VQQAABIQAwAAAQQIABJRBAgAElUECAASEAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlv
+blRocm93cwEIAQACAAAAAAAoAQAjU1RfZTY4ZTEyN2MzMzJhNDhkOTk3MmU4NjI2ZjcxNmUzYjUA
+AAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMAAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12
+NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcAAAC0AAAAzsrv
+vgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJz
+aW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0
+ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBB
+RFC0AAAAHDMAAAAAAAAAAAAANjMAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgzAAAAAAAAAAAA
+AAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAK4aBHQAAAQArhoEdPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAFQAXwBlADYAOABlADEAMgA3AGMAMwAzADIAYQA0ADgAZAA5ADkANwAyAGUAOAA2ADIANgBm
+ADcAMQA2AGUAMwBiADUAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+NwA1ADUAMwAuADMANAAzADQANwAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
+AFQAXwA3ADEAZAA0ADkANgBmADIANQAwADUANQA0AGYANgBkAGEAMAA1ADMANQA4ADUAOQBiAGEA
+MwBkADIAYwBlADcALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
+AEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMAAAACoAAQABAEwAZQBnAGEAbABUAHIA
+YQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBh
+AG0AZQAAAFMAVABfADcAMQBkADQAOQA2AGYAMgA1ADAANQA1ADQAZgA2AGQAYQAwADUAMwA1ADgA
+NQA5AGIAYQAzAGQAMgBjAGUANwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
+AAAAAABTAFQAXwBlADYAOABlADEAMgA3AGMAMwAzADIAYQA0ADgAZAA5ADkANwAyAGUAOAA2ADIA
+NgBmADcAMQA2AGUAMwBiADUAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
+AC4AMAAuADcANQA1ADMALgAzADQAMwA0ADcAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
+ZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANQA1ADMALgAzADQAMwA0ADcAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAASDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+            </ScriptProject>
+          </DTS:ObjectData>
+        </DTS:Executable>
       </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{2D54B8C9-E159-4B67-ADF6-B269A82E9BE9}"
+          DTS:From="Package.EventHandlers[OnError]\Execute SQL Task_ERROR_LOG"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnError]\Script Task" />
+      </DTS:PrecedenceConstraints>
     </DTS:EventHandler>
   </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -25306,109 +25873,37 @@ where [refTable].[MarketSourceCode] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="236,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata"
-          TopLeft="87.3181805989959,54.2174233832096" />
+          TopLeft="181.308563813815,9.06742419055453" />
+        <NodeLayout
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\Execute SQL Task_MaxModifiedDate"
+          TopLeft="491.249992679804,134.049997602999" />
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\Execute SQL Task_Delete_Table"
+          TopLeft="486.874992744997,5.3999999034405" />
         <NodeLayout
           Size="233.333333333334,42.6666666666667"
           Id="Package\Execute SQL Task_ ETLLogTable"
-          TopLeft="85.7954532670028,124.681815952334" />
-        <NodeLayout
-          Size="132,43.3333333333334"
-          Id="Package\Script Task"
-          TopLeft="114.77272556248,198.954542189566" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="203.890150266333,96.8840900498763">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.7977259024576"
-              Start="0,0"
-              End="0,20.2977259024576">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2977259024576" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package\Execute SQL Task"
-          TopLeft="444.999993368983,131.299997652173" />
-        <NodeLayout
-          Size="173.333333333334,42.6666666666667"
-          Id="Package\Execute SQL Task 1"
-          TopLeft="421.249993722886,24.6999995583296" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="526.999993368983,131.299997652173">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-19.0833329794306,-63.9333314271768"
-              Start="0,0"
-              End="-19.0833329794306,-56.4333314271768">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-27.9666657135884" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-27.9666657135884"
-                    Point2="0,-31.9666657135884"
-                    Point3="-4,-31.9666657135884" />
-                  <mssgle:LineSegment
-                    End="-15.0833329794306,-31.9666657135884" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.0833329794306,-31.9666657135884"
-                    Point2="-19.0833329794306,-31.9666657135884"
-                    Point3="-19.0833329794306,-35.9666657135884" />
-                  <mssgle:LineSegment
-                    End="-19.0833329794306,-56.4333314271768" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="183.968528727187,131.881815823588" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="421.249993722886,46.0333328916629">
+          TopLeft="486.874992744997,28.5670453803308">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-97.93181312389,29.51742382488"
+              EndConnector="-69.5664289311824,0"
               Start="0,0"
-              End="-90.43181312389,29.51742382488">
+              End="-62.0664289311824,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-44.965906561945,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-44.965906561945,0"
-                    Point2="-48.965906561945,0"
-                    Point3="-48.965906561945,4" />
-                  <mssgle:LineSegment
-                    End="-48.965906561945,25.51742382488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-48.965906561945,25.51742382488"
-                    Point2="-48.965906561945,29.51742382488"
-                    Point3="-52.965906561945,29.51742382488" />
-                  <mssgle:LineSegment
-                    End="-90.43181312389,29.51742382488" />
+                    End="-62.0664289311824,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25418,31 +25913,53 @@ where [refTable].[MarketSourceCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="202.462119933669,167.348482619001">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="491.249992679804,154.299240046627">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.6893943711895,31.6060595705653"
+              EndConnector="-73.9481306192841,0"
               Start="0,0"
-              End="-21.6893943711895,24.1060595705653">
+              End="-66.4481306192841,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.8030297852827" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.8030297852827"
-                    Point2="0,15.8030297852827"
-                    Point3="-4,15.8030297852827" />
+                    End="-66.4481306192841,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="299.308563813815,51.7340908572212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="317.274762199323,82.315906745778"
+              Start="0,0"
+              End="317.274762199323,74.815906745778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-17.6893943711895,15.8030297852827" />
+                    End="0,37.157953372889" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.6893943711895,15.8030297852827"
-                    Point2="-21.6893943711895,15.8030297852827"
-                    Point3="-21.6893943711895,19.8030297852827" />
+                    Point1="0,37.157953372889"
+                    Point2="0,41.157953372889"
+                    Point3="4,41.157953372889" />
                   <mssgle:LineSegment
-                    End="-21.6893943711895,24.1060595705653" />
+                    End="313.274762199323,41.157953372889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="313.274762199323,41.157953372889"
+                    Point2="317.274762199323,41.157953372889"
+                    Point3="317.274762199323,45.157953372889" />
+                  <mssgle:LineSegment
+                    End="317.274762199323,74.815906745778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25458,11 +25975,37 @@ where [refTable].[MarketSourceCode] = ?</property>
     design-time-name="Package.EventHandlers[OnError]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package.EventHandlers[OnError]\Execute SQL Task"
-          TopLeft="232.74999852851,84.8999994653464" />
+          Size="229.333333333334,42.6666666666667"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task_ERROR_LOG"
+          TopLeft="234.62499850057,37.4500003138185" />
+        <NodeLayout
+          Size="132,42.6666666666667"
+          Id="Package.EventHandlers[OnError]\Script Task"
+          TopLeft="276.249995883554,131.94999764055" />
+        <EdgeLayout
+          Id="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          TopLeft="345.770830525396,80.1166669804851">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.833330660065"
+              Start="0,0"
+              End="0,44.333330660065">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.333330660065" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
@@ -25474,19 +26017,19 @@ where [refTable].[MarketSourceCode] = ?</property>
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1"
-          TopLeft="718.188120611294,221.624240119385" />
+          TopLeft="584.438122604324,221.624240119385" />
         <NodeLayout
           Size="264,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_ToUnicodeAndNumeric"
-          TopLeft="755.094685717909,19.4474743997275" />
+          TopLeft="719.469686248763,18.1474744229733" />
         <NodeLayout
           Size="131.333333333334,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Row Count"
-          TopLeft="647.386353989555,141.358583330898" />
+          TopLeft="649.261353961615,117.958583749323" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Derived Column"
-          TopLeft="799.874988274649,128.54999875635" />
+          TopLeft="804.874988200143,114.899999000431" />
         <NodeLayout
           Size="113.333333333334,42"
           Id="Package\Data Flow Task_Sharepoint_Oata\Lookup"
@@ -25494,7 +26037,7 @@ where [refTable].[MarketSourceCode] = ?</property>
         <NodeLayout
           Size="144,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup"
-          TopLeft="918.396450961292,221.453026343141" />
+          TopLeft="858.396451855362,233.153026133929" />
         <NodeLayout
           Size="135.333333333334,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination"
@@ -25504,39 +26047,23 @@ where [refTable].[MarketSourceCode] = ?</property>
           Id="Package\Data Flow Task_Sharepoint_Oata\Conditional Split"
           TopLeft="365.340903646905,8.15454530873088" />
         <NodeLayout
-          Size="144,42.6666666666667"
-          Id="Package\Data Flow Task_Sharepoint_Oata\OData Source"
-          TopLeft="95.4431795466008,11.6772721429576" />
-        <NodeLayout
           Size="240,42"
           Id="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString"
           TopLeft="356.874993490056,111.716665306787" />
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Row Count Output 1]"
-          TopLeft="713.053020656222,184.025249997564">
+          TopLeft="780.594687294949,137.76262470821">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="164.155300951761,-12.8085845745476"
+              EndConnector="24.2803009051943,0"
               Start="0,0"
-              End="164.155300951761,-5.30858457454764">
+              End="16.7803009051943,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="160.155300951761,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.155300951761,22.5"
-                    Point2="164.155300951761,22.5"
-                    Point3="164.155300951761,18.5" />
-                  <mssgle:LineSegment
-                    End="164.155300951761,-5.30858457454764" />
+                    End="16.7803009051943,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25547,18 +26074,30 @@ where [refTable].[MarketSourceCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Output]"
-          TopLeft="239.443179546601,31.0825753925109">
+          TopLeft="335.263887461896,40.9611117167936">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.897724100304,0"
+              EndConnector="30.0770161850093,-11.8065664080627"
               Start="0,0"
-              End="118.397724100304,0">
+              End="22.5770161850093,-11.8065664080627">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="118.397724100304,0" />
+                    End="11.0385080925046,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.0385080925046,0"
+                    Point2="15.0385080925046,0"
+                    Point3="15.0385080925046,-4" />
+                  <mssgle:LineSegment
+                    End="15.0385080925046,-7.80656640806271" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.0385080925046,-7.80656640806271"
+                    Point2="15.0385080925046,-11.8065664080627"
+                    Point3="19.0385080925046,-11.8065664080627" />
+                  <mssgle:LineSegment
+                    End="22.5770161850093,-11.8065664080627" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25573,50 +26112,62 @@ where [refTable].[MarketSourceCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-48.9595950015573,61.1949432746991"
+              EndConnector="-108.959594107487,72.8949430654866"
               Start="0,0"
-              End="-48.9595950015573,53.6949432746991">
+              End="-108.959594107487,65.3949430654866">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5974716373496" />
+                    End="0,32.4474715327433" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.5974716373496"
-                    Point2="0,30.5974716373496"
-                    Point3="-4,30.5974716373496" />
+                    Point1="0,32.4474715327433"
+                    Point2="0,36.4474715327433"
+                    Point3="-4,36.4474715327433" />
                   <mssgle:LineSegment
-                    End="-44.9595950015573,30.5974716373496" />
+                    End="-104.959594107487,36.4474715327433" />
                   <mssgle:CubicBezierSegment
-                    Point1="-44.9595950015573,30.5974716373496"
-                    Point2="-48.9595950015573,30.5974716373496"
-                    Point3="-48.9595950015573,34.5974716373496" />
+                    Point1="-104.959594107487,36.4474715327433"
+                    Point2="-108.959594107487,36.4474715327433"
+                    Point3="-108.959594107487,40.4474715327433" />
                   <mssgle:LineSegment
-                    End="-48.9595950015573,53.6949432746991" />
+                    End="-108.959594107487,65.3949430654866" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-72.6711842195287,35.5974716373496,96.3827734375,11.609375"
+              BoundingBox="-102.671183772493,41.4474715327433,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Fuzzy Lookup Output]"
-          TopLeft="918.396450961292,242.871966564596">
+          TopLeft="858.396451855362,254.486359467262">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-36.2083303499976,0"
+              EndConnector="-109.958329251038,-11.5287860145436"
               Start="0,0"
-              End="-28.7083303499976,0">
+              End="-102.458329251038,-11.5287860145436">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-28.7083303499976,0" />
+                    End="-50.9791646255189,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-50.9791646255189,0"
+                    Point2="-54.9791646255189,0"
+                    Point3="-54.9791646255189,-4" />
+                  <mssgle:LineSegment
+                    End="-54.9791646255189,-7.52878601454364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-54.9791646255189,-7.52878601454364"
+                    Point2="-54.9791646255189,-11.5287860145436"
+                    Point3="-58.9791646255189,-11.5287860145436" />
+                  <mssgle:LineSegment
+                    End="-102.458329251038,-11.5287860145436" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25627,30 +26178,18 @@ where [refTable].[MarketSourceCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output1]"
-          TopLeft="954.541654941316,149.883332089683">
+          TopLeft="959.54165486681,137.745707701103">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="28.1477243548662,-10.6252490212415"
+              EndConnector="23.1477244293724,0"
               Start="0,0"
-              End="20.6477243548662,-10.6252490212415">
+              End="15.6477244293724,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="10.0738621774331,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.0738621774331,0"
-                    Point2="14.0738621774331,0"
-                    Point3="14.0738621774331,-4" />
-                  <mssgle:LineSegment
-                    End="14.0738621774331,-6.6252490212415" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.0738621774331,-6.6252490212415"
-                    Point2="14.0738621774331,-10.6252490212415"
-                    Point3="18.0738621774331,-10.6252490212415" />
-                  <mssgle:LineSegment
-                    End="20.6477243548662,-10.6252490212415" />
+                    End="15.6477244293724,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25661,18 +26200,18 @@ where [refTable].[MarketSourceCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output]"
-          TopLeft="718.188120611294,244.386108568571">
+          TopLeft="584.438122604324,244.386108568571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-213.945701448811,0"
+              EndConnector="-80.1957034418421,0"
               Start="0,0"
-              End="-206.445701448811,0">
+              End="-72.6957034418421,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-206.445701448811,0" />
+                    End="-72.6957034418421,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25683,30 +26222,18 @@ where [refTable].[MarketSourceCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Data Conversion Output1]"
-          TopLeft="596.874993490056,132.716665306787">
+          TopLeft="596.874993490056,136.004291194721">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.5113604994992,29.9752513574437"
+              EndConnector="52.3863604715593,0"
               Start="0,0"
-              End="43.0113604994992,29.9752513574437">
+              End="44.8863604715593,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="21.2556802497496,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.2556802497496,0"
-                    Point2="25.2556802497496,0"
-                    Point3="25.2556802497496,4" />
-                  <mssgle:LineSegment
-                    End="25.2556802497496,25.9752513574437" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.2556802497496,25.9752513574437"
-                    Point2="25.2556802497496,29.9752513574437"
-                    Point3="29.2556802497496,29.9752513574437" />
-                  <mssgle:LineSegment
-                    End="43.0113604994992,29.9752513574437" />
+                    End="44.8863604715593,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25717,30 +26244,30 @@ where [refTable].[MarketSourceCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Data Conversion Output]"
-          TopLeft="887.094685717909,62.1141410663942">
+          TopLeft="851.469686248763,60.81414108964">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-410.219692227853,49.602524240393"
+              EndConnector="-374.594692758707,50.902524217147"
               Start="0,0"
-              End="-410.219692227853,42.102524240393">
+              End="-374.594692758707,43.402524217147">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.8012621201965" />
+                    End="0,21.4512621085735" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.8012621201965"
-                    Point2="0,24.8012621201965"
-                    Point3="-4,24.8012621201965" />
+                    Point1="0,21.4512621085735"
+                    Point2="0,25.4512621085735"
+                    Point3="-4,25.4512621085735" />
                   <mssgle:LineSegment
-                    End="-406.219692227853,24.8012621201965" />
+                    End="-370.594692758707,25.4512621085735" />
                   <mssgle:CubicBezierSegment
-                    Point1="-406.219692227853,24.8012621201965"
-                    Point2="-410.219692227853,24.8012621201965"
-                    Point3="-410.219692227853,28.8012621201965" />
+                    Point1="-370.594692758707,25.4512621085735"
+                    Point2="-374.594692758707,25.4512621085735"
+                    Point3="-374.594692758707,29.4512621085735" />
                   <mssgle:LineSegment
-                    End="-410.219692227853,42.102524240393" />
+                    End="-374.594692758707,43.402524217147" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25755,51 +26282,43 @@ where [refTable].[MarketSourceCode] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="233.753782071004,11.62626242433"
+              EndConnector="198.128782601858,10.3262624475758"
               Start="0,0"
-              End="226.253782071004,11.62626242433">
+              End="190.628782601858,10.3262624475758">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="112.876891035502,0" />
+                    End="95.0643913009291,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="112.876891035502,0"
-                    Point2="116.876891035502,0"
-                    Point3="116.876891035502,4" />
+                    Point1="95.0643913009291,0"
+                    Point2="99.0643913009291,0"
+                    Point3="99.0643913009291,4" />
                   <mssgle:LineSegment
-                    End="116.876891035502,7.62626242432995" />
+                    End="99.0643913009291,6.32626244757576" />
                   <mssgle:CubicBezierSegment
-                    Point1="116.876891035502,7.62626242432995"
-                    Point2="116.876891035502,11.62626242433"
-                    Point3="120.876891035502,11.62626242433" />
+                    Point1="99.0643913009291,6.32626244757576"
+                    Point2="99.0643913009291,10.3262624475758"
+                    Point3="103.064391300929,10.3262624475758" />
                   <mssgle:LineSegment
-                    End="226.253782071004,11.62626242433" />
+                    End="190.628782601858,10.3262624475758" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="51.3205043167522,-16.7841796875,131.1127734375,10.7841796875"
+              BoundingBox="33.508004582179,-16.7841796875,131.1127734375,10.7841796875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="144,42.6666666666667"
+          Id="Package\Data Flow Task_Sharepoint_Oata\OData Source"
+          TopLeft="191.263887461896,19.6277783834603" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <DtsEventHandler
-    design-time-name="Package\Data Flow Task_Sharepoint_Oata.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package\Data Flow Task_Sharepoint_Oata.EventHandlers[OnError]\Execute SQL Task"
-          TopLeft="177,60" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task_Sharepoint_Oata\Lookup">
     <Properties>
