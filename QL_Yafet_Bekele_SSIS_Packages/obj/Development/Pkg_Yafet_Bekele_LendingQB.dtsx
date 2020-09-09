@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_Yafet_Bekele_LendingQB"
   DTS:PackageType="5"
-  DTS:VersionBuild="111"
-  DTS:VersionGUID="{50865F3D-24F5-4C17-ACAA-2AC0B62820AA}">
+  DTS:VersionBuild="115"
+  DTS:VersionGUID="{63BDD12A-DB6E-43A1-AFD3-8D09C971C7BC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -138,7 +138,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varTimerStamp">
       <DTS:VariableValue
-        DTS:DataType="7">9/6/2020 11:54:21 PM</DTS:VariableValue>
+        DTS:DataType="7">9/7/2020 3:28:13 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -155,7 +155,6 @@
       DTS:refId="Package\Data Flow Task_Sharepoint_Oata"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{6A65AFE7-0CC5-44CD-9024-581FEB424AF0}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5618,7 +5617,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Outputs[Derived Column Output].Columns[LoanOffiecFirstName]"
                       name="LoanOffiecFirstName"
                       truncationRowDisposition="FailComponent">
@@ -5627,13 +5626,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[SUBSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]},1,[FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}," ",1) - 1)</property>
+                          name="Expression">(DT_WSTR,100)[SUBSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]},1,[FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}," ",1) - 1)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">SUBSTRING([Copy of Copy of LoanOfficer],1,FINDSTRING([Copy of Copy of LoanOfficer]," ",1) - 1)</property>
+                          name="FriendlyExpression">(DT_WSTR,100)SUBSTRING([Copy of Copy of LoanOfficer],1,FINDSTRING([Copy of Copy of LoanOfficer]," ",1) - 1)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5641,7 +5640,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Outputs[Derived Column Output].Columns[LoanOfficerLastName]"
                       name="LoanOfficerLastName"
                       truncationRowDisposition="FailComponent">
@@ -5650,13 +5649,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[SUBSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]},[FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}," ",1) + 1,[LEN](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}) - [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}," ",1))</property>
+                          name="Expression">(DT_WSTR,100)[SUBSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]},[FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}," ",1) + 1,[LEN](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}) - [FINDSTRING](#{Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString.Outputs[Data Conversion Output].Columns[Copy of Copy of LoanOfficer]}," ",1))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">SUBSTRING([Copy of Copy of LoanOfficer],FINDSTRING([Copy of Copy of LoanOfficer]," ",1) + 1,LEN([Copy of Copy of LoanOfficer]) - FINDSTRING([Copy of Copy of LoanOfficer]," ",1))</property>
+                          name="FriendlyExpression">(DT_WSTR,100)SUBSTRING([Copy of Copy of LoanOfficer],FINDSTRING([Copy of Copy of LoanOfficer]," ",1) + 1,LEN([Copy of Copy of LoanOfficer]) - FINDSTRING([Copy of Copy of LoanOfficer]," ",1))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -14514,7 +14513,7 @@
                     <inputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Inputs[Fuzzy Lookup Input].Columns[LoanOffiecFirstName]"
                       cachedDataType="wstr"
-                      cachedLength="101"
+                      cachedLength="100"
                       cachedName="LoanOffiecFirstName"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Outputs[Derived Column Output].Columns[LoanOffiecFirstName]">
                       <properties>
@@ -14547,7 +14546,7 @@
                     <inputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Inputs[Fuzzy Lookup Input].Columns[LoanOfficerLastName]"
                       cachedDataType="wstr"
-                      cachedLength="101"
+                      cachedLength="100"
                       cachedName="LoanOfficerLastName"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column.Outputs[Derived Column Output].Columns[LoanOfficerLastName]">
                       <properties>
@@ -21067,7 +21066,7 @@
                     <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[LoanOffiecFirstName]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[LoanOffiecFirstName]"
                       name="LoanOffiecFirstName">
                       <properties>
@@ -21091,7 +21090,7 @@
                     <outputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[LoanOfficerLastName]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[LoanOfficerLastName]"
                       name="LoanOfficerLastName">
                       <properties>
@@ -23609,7 +23608,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                     <inputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoanOfficerLastName]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="LoanOfficerLastName"
                       externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanOfficerLastName]"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[LoanOfficerLastName]" />
@@ -23714,7 +23713,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                     <inputColumn
                       refId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LoanOffiecFirstName]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="LoanOffiecFirstName"
                       externalMetadataColumnId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoanOfficerFirstName]"
                       lineageId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[LoanOffiecFirstName]" />
@@ -24999,7 +24998,6 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_ ETLLogTable"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{6A1E21FF-E521-4639-9465-A741306EED49}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -25060,7 +25058,6 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_Delete_Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{47B74765-BBDD-4538-819E-D17CDE551E61}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -25078,7 +25075,6 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_MaxModifiedDate"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{FF2DDCF3-1BFE-4D42-952B-ACDF2D5E7CA6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -25118,7 +25114,7 @@ where [refTable].[MarketSourceCode] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{EC174D27-5BED-40EC-8B44-84647ABCA1EA}"
+      DTS:DTSID="{93F306AA-B70A-4491-A9B8-0C8C8E03229F}"
       DTS:From="Package\Execute SQL Task_Delete_Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -25222,6 +25218,15 @@ where [refTable].[MarketSourceCode] = ?</property>
               Language="CSharp"
               ReadOnlyVariables="System::PackageName,User::varFromEmail,User::varPassword,User::varSmtpClient,User::varSmtpServerPort,User::varSubject,User::varToEmail"
               ReadWriteVariables="System::ErrorCode,System::ErrorDescription,User::varTimerStamp">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -25341,35 +25346,6 @@ where [refTable].[MarketSourceCode] = ?</property>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Settings.get_Default():ST_e68e127c332a48d9972e8626f716e3b5.Properties.Sett" +
-    "ings")]
-
-namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -25623,6 +25599,35 @@ namespace ST_e68e127c332a48d9972e8626f716e3b5
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Settings.get_Default():ST_e68e127c332a48d9972e8626f716e3b5.Properties.Sett" +
+    "ings")]
+
+namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -25652,15 +25657,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -25896,33 +25892,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="236,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata"
-          TopLeft="181.308563813815,9.06742419055453" />
+          TopLeft="185.683563748622,48.7174234815573" />
         <NodeLayout
           Size="233.333333333334,42.6666666666667"
           Id="Package\Execute SQL Task_ ETLLogTable"
-          TopLeft="183.968528727187,131.881815823588" />
+          TopLeft="185.21852870856,183.231814905378" />
         <NodeLayout
           Size="232,42.6666666666667"
           Id="Package\Execute SQL Task_Delete_Table"
-          TopLeft="486.874992744997,5.3999999034405" />
+          TopLeft="524.374992186203,30.0999994617701" />
         <NodeLayout
           Size="250.666666666667,42.6666666666667"
           Id="Package\Execute SQL Task_MaxModifiedDate"
-          TopLeft="491.249992679804,134.049997602999" />
+          TopLeft="506.249992456287,171.099996940493" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="491.249992679804,154.299240046627">
+          TopLeft="506.249992456287,192.433330273827">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-73.9481306192841,0"
+              EndConnector="-87.6981304143928,12.131817964885"
               Start="0,0"
-              End="-66.4481306192841,0">
+              End="-80.1981304143928,12.131817964885">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-66.4481306192841,0" />
+                    End="-39.8490652071964,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.8490652071964,0"
+                    Point2="-43.8490652071964,0"
+                    Point3="-43.8490652071964,4" />
+                  <mssgle:LineSegment
+                    End="-43.8490652071964,8.13181796488502" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.8490652071964,8.13181796488502"
+                    Point2="-43.8490652071964,12.131817964885"
+                    Point3="-47.8490652071964,12.131817964885" />
+                  <mssgle:LineSegment
+                    End="-80.1981304143928,12.131817964885" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25933,30 +25941,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="299.308563813815,51.7340908572212">
+          TopLeft="303.683563748622,91.384090148224">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="317.274762199323,82.315906745778"
+              EndConnector="327.899762040998,79.7159067922694"
               Start="0,0"
-              End="317.274762199323,74.815906745778">
+              End="327.899762040998,72.2159067922694">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.157953372889" />
+                    End="0,35.8579533961347" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.157953372889"
-                    Point2="0,41.157953372889"
-                    Point3="4,41.157953372889" />
+                    Point1="0,35.8579533961347"
+                    Point2="0,39.8579533961347"
+                    Point3="4,39.8579533961347" />
                   <mssgle:LineSegment
-                    End="313.274762199323,41.157953372889" />
+                    End="323.899762040998,39.8579533961347" />
                   <mssgle:CubicBezierSegment
-                    Point1="313.274762199323,41.157953372889"
-                    Point2="317.274762199323,41.157953372889"
-                    Point3="317.274762199323,45.157953372889" />
+                    Point1="323.899762040998,39.8579533961347"
+                    Point2="327.899762040998,39.8579533961347"
+                    Point3="327.899762040998,43.8579533961347" />
                   <mssgle:LineSegment
-                    End="317.274762199323,74.815906745778" />
+                    End="327.899762040998,72.2159067922694" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25967,18 +25975,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="486.874992744997,28.5670453803308">
+          TopLeft="524.374992186203,51.4333327951035">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-69.5664289311824,0"
+              EndConnector="-102.691428437581,18.6174240197872"
               Start="0,0"
-              End="-62.0664289311824,0">
+              End="-95.191428437581,18.6174240197872">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-62.0664289311824,0" />
+                    End="-47.3457142187905,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.3457142187905,0"
+                    Point2="-51.3457142187905,0"
+                    Point3="-51.3457142187905,4" />
+                  <mssgle:LineSegment
+                    End="-51.3457142187905,14.6174240197872" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51.3457142187905,14.6174240197872"
+                    Point2="-51.3457142187905,18.6174240197872"
+                    Point3="-55.3457142187905,18.6174240197872" />
+                  <mssgle:LineSegment
+                    End="-95.191428437581,18.6174240197872" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26042,25 +26062,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_ToUnicodeAndNumeric"
           TopLeft="804.625934979836,19.772474393916" />
         <NodeLayout
-          Size="131.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task_Sharepoint_Oata\Row Count"
-          TopLeft="496.136356243355,107.396083938195" />
-        <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Derived Column"
-          TopLeft="716.593739515636,114.08749901496" />
+          TopLeft="719.093739478383,121.237498887108" />
         <NodeLayout
           Size="113.333333333334,42"
           Id="Package\Data Flow Task_Sharepoint_Oata\Lookup"
-          TopLeft="962.064379603518,102.820583344486" />
+          TopLeft="910.814380367203,119.72058304229" />
         <NodeLayout
           Size="284,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup_MortgageInsuranceCompany"
-          TopLeft="786.365202928712,238.353026040945" />
+          TopLeft="817.615202463051,230.55302618042" />
+        <NodeLayout
+          Size="131.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task_Sharepoint_Oata\Row Count"
+          TopLeft="504.261356122283,125.596083612754" />
         <NodeLayout
           Size="135.333333333334,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination"
-          TopLeft="215.002838122531,219.606310438263" />
+          TopLeft="228.127837926953,233.906310182559" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task_Sharepoint_Oata\Conditional Split"
@@ -26072,21 +26092,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="240,42"
           Id="Package\Data Flow Task_Sharepoint_Oata\Data Conversion_UnicodeToString"
-          TopLeft="138.124996749685,110.091665335844" />
+          TopLeft="138.124996749685,121.791665126632" />
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Row Count Output 1]"
-          TopLeft="627.469689576689,132.075124809911">
+          TopLeft="635.594689455616,144.750124583264">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89.1240499389475,0"
+              EndConnector="83.4990500227668,0"
               Start="0,0"
-              End="81.6240499389475,0">
+              End="75.9990500227668,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="81.6240499389475,0" />
+                    End="75.9990500227668,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26119,54 +26139,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Lookup Match Output]"
-          TopLeft="1018.73104627018,144.820583344486">
+          TopLeft="963.54812474846,161.72058304229">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-90.3658433414726,93.5324426964591"
+              EndConnector="0,68.8324431381294"
               Start="0,0"
-              End="-90.3658433414726,86.0324426964591">
+              End="0,61.3324431381294">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.7662213482296" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.7662213482296"
-                    Point2="0,46.7662213482296"
-                    Point3="-4,46.7662213482296" />
-                  <mssgle:LineSegment
-                    End="-86.3658433414726,46.7662213482296" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86.3658433414726,46.7662213482296"
-                    Point2="-90.3658433414726,46.7662213482296"
-                    Point3="-90.3658433414726,50.7662213482296" />
-                  <mssgle:LineSegment
-                    End="-90.3658433414726,86.0324426964591" />
+                    End="0,61.3324431381294" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-93.3743083894863,51.7662213482296,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,24.8615340690647,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Fuzzy Lookup Output]"
-          TopLeft="786.365202928712,258.634466282741">
+          TopLeft="817.615202463051,254.734466352478">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-106.677079299933,0"
+              EndConnector="-137.927078834272,0"
               Start="0,0"
-              End="-99.1770792999326,0">
+              End="-130.427078834272,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-99.1770792999326,0" />
+                    End="-130.427078834272,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26177,30 +26185,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output1]"
-          TopLeft="871.260406182303,135.420832348293">
+          TopLeft="873.76040614505,141.645707631366">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="90.8039734212149,-11.6002490038072"
+              EndConnector="37.053974222153,0"
               Start="0,0"
-              End="83.3039734212149,-11.6002490038072">
+              End="29.553974222153,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="41.4019867106074,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.4019867106074,0"
-                    Point2="45.4019867106074,0"
-                    Point3="45.4019867106074,-4" />
-                  <mssgle:LineSegment
-                    End="45.4019867106074,-7.60024900380722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.4019867106074,-7.60024900380722"
-                    Point2="45.4019867106074,-11.6002490038072"
-                    Point3="49.4019867106074,-11.6002490038072" />
-                  <mssgle:LineSegment
-                    End="83.3039734212149,-11.6002490038072" />
+                    End="29.553974222153,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26211,30 +26207,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output]"
-          TopLeft="515.688123628779,257.582573191203">
+          TopLeft="515.688123628779,256.411108353548">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-165.351952172915,-16.6429294196068"
+              EndConnector="-152.226952368492,0"
               Start="0,0"
-              End="-157.851952172915,-16.6429294196068">
+              End="-144.726952368492,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-78.6759760864574,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-78.6759760864574,0"
-                    Point2="-82.6759760864574,0"
-                    Point3="-82.6759760864574,-4" />
-                  <mssgle:LineSegment
-                    End="-82.6759760864574,-12.6429294196068" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-82.6759760864574,-12.6429294196068"
-                    Point2="-82.6759760864574,-16.6429294196068"
-                    Point3="-86.6759760864574,-16.6429294196068" />
-                  <mssgle:LineSegment
-                    End="-157.851952172915,-16.6429294196068" />
+                    End="-144.726952368492,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26245,18 +26229,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Data Conversion Output1]"
-          TopLeft="378.124996749685,129.910541303686">
+          TopLeft="378.124996749685,144.860541036359">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="118.01135949367,0"
+              EndConnector="126.136359372598,0"
               Start="0,0"
-              End="110.51135949367,0">
+              End="118.636359372598,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="110.51135949367,0" />
+                    End="118.636359372598,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26271,26 +26255,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-678.500938230151,47.6525242752615"
+              EndConnector="-678.500938230151,59.352524066049"
               Start="0,0"
-              End="-678.500938230151,40.1525242752615">
+              End="-678.500938230151,51.852524066049">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.8262621376308" />
+                    End="0,25.6762620330245" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.8262621376308"
-                    Point2="0,23.8262621376308"
-                    Point3="-4,23.8262621376308" />
+                    Point1="0,25.6762620330245"
+                    Point2="0,29.6762620330245"
+                    Point3="-4,29.6762620330245" />
                   <mssgle:LineSegment
-                    End="-674.500938230151,23.8262621376308" />
+                    End="-674.500938230151,29.6762620330245" />
                   <mssgle:CubicBezierSegment
-                    Point1="-674.500938230151,23.8262621376308"
-                    Point2="-678.500938230151,23.8262621376308"
-                    Point3="-678.500938230151,27.8262621376308" />
+                    Point1="-674.500938230151,29.6762620330245"
+                    Point2="-678.500938230151,29.6762620330245"
+                    Point3="-678.500938230151,33.6762620330245" />
                   <mssgle:LineSegment
-                    End="-678.500938230151,40.1525242752615" />
+                    End="-678.500938230151,51.852524066049" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26332,7 +26316,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -26342,7 +26326,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
