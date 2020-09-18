@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_Yafet_Bekele_LendingQB"
   DTS:PackageType="5"
-  DTS:VersionBuild="150"
-  DTS:VersionGUID="{6C2D8044-6160-4945-B003-BAF8C6A6464D}">
+  DTS:VersionBuild="171"
+  DTS:VersionGUID="{CA5AD49D-D23A-4EB6-A42A-907CD665EBD8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -138,7 +138,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varTimerStamp">
       <DTS:VariableValue
-        DTS:DataType="7">9/11/2020 1:48:44 PM</DTS:VariableValue>
+        DTS:DataType="7">9/17/2020 7:20:27 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -692,61 +692,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[SUBSTRING]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]},[FINDSTRING]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]},"",1) + 1,[LEN]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]}) - [FINDSTRING]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]}," ",1))</property>
+                          name="Expression">[SUBSTRING]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]},[FINDSTRING]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]}," ",1) + 1,[LEN]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]}) - [FINDSTRING]((DT_WSTR,100)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[LoanOfficer]}," ",1))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">SUBSTRING((DT_WSTR,100)LoanOfficer,FINDSTRING((DT_WSTR,100)LoanOfficer,"",1) + 1,LEN((DT_WSTR,100)LoanOfficer) - FINDSTRING((DT_WSTR,100)LoanOfficer," ",1))</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserFirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="128"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserFirstName]"
-                      name="CloserFirstName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]},1,[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]},"",1) - 1)</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Closer_Name,1,FINDSTRING((DT_WSTR,128)Closer_Name,"",1) - 1)</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserLastName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="128"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserLastName]"
-                      name="CloserLastName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]},[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]},"",1) + 1,[LEN]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]}) - [FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]}," ",1))</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Closer_Name,FINDSTRING((DT_WSTR,128)Closer_Name,"",1) + 1,LEN((DT_WSTR,128)Closer_Name) - FINDSTRING((DT_WSTR,128)Closer_Name," ",1))</property>
+                          name="FriendlyExpression">SUBSTRING((DT_WSTR,100)LoanOfficer,FINDSTRING((DT_WSTR,100)LoanOfficer," ",1) + 1,LEN((DT_WSTR,100)LoanOfficer) - FINDSTRING((DT_WSTR,100)LoanOfficer," ",1))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -764,13 +716,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]},1,[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]},"",1) - 1)</property>
+                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]},1,[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]}," ",1) - 1)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Loan_Processor_Name,1,FINDSTRING((DT_WSTR,128)Loan_Processor_Name,"",1) - 1)</property>
+                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Loan_Processor_Name,1,FINDSTRING((DT_WSTR,128)Loan_Processor_Name," ",1) - 1)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -788,13 +740,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]},[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]},"",1) + 1,[LEN]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]}) - [FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]}," ",1))</property>
+                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]},[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]}," ",1) + 1,[LEN]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]}) - [FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Loan_Processor_Name]}," ",1))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Loan_Processor_Name,FINDSTRING((DT_WSTR,128)Loan_Processor_Name,"",1) + 1,LEN((DT_WSTR,128)Loan_Processor_Name) - FINDSTRING((DT_WSTR,128)Loan_Processor_Name," ",1))</property>
+                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Loan_Processor_Name,FINDSTRING((DT_WSTR,128)Loan_Processor_Name," ",1) + 1,LEN((DT_WSTR,128)Loan_Processor_Name) - FINDSTRING((DT_WSTR,128)Loan_Processor_Name," ",1))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -812,13 +764,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]},1,[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]},"",1) - 1)</property>
+                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]},1,[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]}," ",1) - 1)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Underwriter_Name,1,FINDSTRING((DT_WSTR,128)Underwriter_Name,"",1) - 1)</property>
+                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Underwriter_Name,1,FINDSTRING((DT_WSTR,128)Underwriter_Name," ",1) - 1)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -836,13 +788,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]},[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]},"",1) + 1,[LEN]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]}) - [FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]}," ",1))</property>
+                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]},[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]}," ",1) + 1,[LEN]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]}) - [FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Underwriter_Name]}," ",1))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Underwriter_Name,FINDSTRING((DT_WSTR,128)Underwriter_Name,"",1) + 1,LEN((DT_WSTR,128)Underwriter_Name) - FINDSTRING((DT_WSTR,128)Underwriter_Name," ",1))</property>
+                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Underwriter_Name,FINDSTRING((DT_WSTR,128)Underwriter_Name," ",1) + 1,LEN((DT_WSTR,128)Underwriter_Name) - FINDSTRING((DT_WSTR,128)Underwriter_Name," ",1))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2087,6 +2039,54 @@
                           name="FriendlyExpression">(DT_STR,72,1252)(DT_WSTR,72)LoanID</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserFirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="128"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserFirstName]"
+                      name="CloserFirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]},1,[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]}," ",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Closer_Name,1,FINDSTRING((DT_WSTR,128)Closer_Name," ",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserLastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="128"
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[CloserLastName]"
+                      name="CloserLastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,128,1252)[SUBSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]},[FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]}," ",1) + 1,[LEN]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]}) - [FINDSTRING]((DT_WSTR,128)#{Package\Data Flow Task_Sharepoint_Oata\OData Source.Outputs[Output].Columns[Closer_Name]}," ",1))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,128,1252)SUBSTRING((DT_WSTR,128)Closer_Name,FINDSTRING((DT_WSTR,128)Closer_Name," ",1) + 1,LEN((DT_WSTR,128)Closer_Name) - FINDSTRING((DT_WSTR,128)Closer_Name," ",1))</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2134,29 +2134,11 @@
                       cachedDataType="str"
                       cachedLength="128"
                       cachedName="Dc_MortgageInsuranceCompany"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[Dc_MortgageInsuranceCompany]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Outputs[Derived Column Output].Columns[Derived Column 1]"
-                      codePage="1252"
-                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="128"
-                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Outputs[Derived Column Output].Columns[Derived Column 1]"
-                      name="Derived Column 1"
-                      truncationRowDisposition="FailComponent">
+                      lineageId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output].Columns[Dc_MortgageInsuranceCompany]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
                       <properties>
                         <property
                           containsID="true"
@@ -2170,8 +2152,18 @@
                           expressionType="Notify"
                           name="FriendlyExpression">(DT_STR,128,1252)REPLACENULL((DT_WSTR,128)Dc_MortgageInsuranceCompany,"Dunatek")</property>
                       </properties>
-                    </outputColumn>
-                  </outputColumns>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -9696,37 +9688,6 @@ where [refTable].[MarketSourceCode] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task_Sharepoint_Oata\Multicast"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Outputs[Multicast Output 2]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
-                  synchronousInputId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task_Sharepoint_Oata\OData Source"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="OData Source Component;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -13027,14 +12988,14 @@ where [refTable].[MarketSourceCode] = ?</property>
               startId="Package\Data Flow Task_Sharepoint_Oata\Conditional Split.Outputs[BorrFirstorLastName_NotTest]" />
             <path
               refId="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output1]"
               endId="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup 1.Inputs[Fuzzy Lookup Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task_Sharepoint_Oata\Lookup 1.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task_Sharepoint_Oata.Paths[Fuzzy Lookup Output]"
               endId="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
@@ -13045,11 +13006,6 @@ where [refTable].[MarketSourceCode] = ?</property>
               endId="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Sharepoint_Oata\Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task_Sharepoint_Oata.Paths[Multicast Output 1]"
-              endId="Package\Data Flow Task_Sharepoint_Oata\Lookup 1.Inputs[Lookup Input]"
-              name="Multicast Output 1"
-              startId="Package\Data Flow Task_Sharepoint_Oata\Multicast.Outputs[Multicast Output 1]" />
             <path
               refId="Package\Data Flow Task_Sharepoint_Oata.Paths[Output]"
               endId="Package\Data Flow Task_Sharepoint_Oata\Conditional Split.Inputs[Conditional Split Input]"
@@ -13068,6 +13024,7 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_ ETLLogTable"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{6A1E21FF-E521-4639-9465-A741306EED49}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -13128,6 +13085,7 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_Delete_Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{47B74765-BBDD-4538-819E-D17CDE551E61}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -13145,6 +13103,7 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_MaxModifiedDate"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{FF2DDCF3-1BFE-4D42-952B-ACDF2D5E7CA6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -14124,133 +14083,53 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Data Flow Task_Sharepoint_Oata">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Derived Column 1"
-          TopLeft="803.124988032505,33.7999993956089" />
-        <NodeLayout
-          Size="144,42.6666666666667"
-          Id="Package\Data Flow Task_Sharepoint_Oata\OData Source"
-          TopLeft="254.388886521261,23.5277783137229" />
+          TopLeft="859.999987185002,33.3329544500938" />
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Derived Column 2"
-          TopLeft="607.499990947545,131.94999764055" />
+          TopLeft="637.49999050051,141.882952509068" />
+        <NodeLayout
+          Size="144,42.6666666666667"
+          Id="Package\Data Flow Task_Sharepoint_Oata\OData Source"
+          TopLeft="179.388887638848,34.1107331706184" />
         <NodeLayout
           Size="131.333333333334,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Row Count"
-          TopLeft="618.011354427276,25.4960854026815" />
-        <NodeLayout
-          Size="121.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task_Sharepoint_Oata\Multicast"
-          TopLeft="952.499985806644,79.9499985703826" />
-        <NodeLayout
-          Size="181.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination 1"
-          TopLeft="169.999997466803,126.749997733533" />
+          TopLeft="647.386353989555,36.7290402479541" />
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup 1"
-          TopLeft="415.624993806705,131.349998151958" />
+          TopLeft="415.624993806705,141.282953020476" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task_Sharepoint_Oata\Conditional Split"
-          TopLeft="441.122152517676,27.817044957138" />
+          TopLeft="409.247152992651,31.8999999302626" />
+        <NodeLayout
+          Size="181.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination 1"
+          TopLeft="157.499997653068,138.632952567183" />
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\Data Flow Task_Sharepoint_Oata\Lookup 1"
-          TopLeft="841.249987464399,131.949997640551" />
-        <EdgeLayout
-          Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output]"
-          TopLeft="967.124988032505,55.1333327289422">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.0416644408056,24.8166658414404"
-              Start="0,0"
-              End="46.0416644408056,17.3166658414404">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="42.0416644408056,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.0416644408056,0"
-                    Point2="46.0416644408056,0"
-                    Point3="46.0416644408056,4" />
-                  <mssgle:LineSegment
-                    End="46.0416644408056,17.3166658414404" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task_Sharepoint_Oata.Paths[BorrFirstorLastName_NotTest]"
-          TopLeft="519.122152517676,69.817044957138">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="164.555868576267,-1.65429288778985"
-              Start="0,0"
-              End="164.555868576267,5.84570711221015">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="160.555868576267,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.555868576267,22.5"
-                    Point2="164.555868576267,22.5"
-                    Point3="164.555868576267,18.5" />
-                  <mssgle:LineSegment
-                    End="164.555868576267,5.84570711221015" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="16.7215475693835,27.5,131.1127734375,10.7841796875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="888.749986756594,145.132952450955" />
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Row Count Output 1]"
-          TopLeft="749.34468776061,46.8294187360148">
+          TopLeft="778.719687322888,56.3643306823573">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="53.780300271895,8.30391399292742"
+              EndConnector="81.2802998621137,0"
               Start="0,0"
-              End="46.280300271895,8.30391399292742">
+              End="73.7802998621137,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="22.8901501359475,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.8901501359475,0"
-                    Point2="26.8901501359475,0"
-                    Point3="26.8901501359475,4" />
-                  <mssgle:LineSegment
-                    End="26.8901501359475,4.30391399292742" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26.8901501359475,4.30391399292742"
-                    Point2="26.8901501359475,8.30391399292742"
-                    Point3="30.8901501359475,8.30391399292742" />
-                  <mssgle:LineSegment
-                    End="46.280300271895,8.30391399292742" />
+                    End="73.7802998621137,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14261,46 +14140,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Output]"
-          TopLeft="398.388886521261,46.8390783020971">
+          TopLeft="323.388887638848,54.1720332171072">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="42.7332659964151,0"
+              EndConnector="85.8582653538024,0"
               Start="0,0"
-              End="35.2332659964151,0">
+              End="78.3582653538024,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="35.2332659964151,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Multicast Output 1]"
-          TopLeft="952.499985806644,101.283331903716">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-49.9166650089112,30.6666657368346"
-              Start="0,0"
-              End="-49.9166650089112,23.1666657368346">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-45.9166650089112,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-45.9166650089112,0"
-                    Point2="-49.9166650089112,0"
-                    Point3="-49.9166650089112,4" />
-                  <mssgle:LineSegment
-                    End="-49.9166650089112,23.1666657368346" />
+                    End="78.3582653538024,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14311,42 +14162,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Lookup Match Output]"
-          TopLeft="841.249987464399,153.283330973884">
+          TopLeft="888.749986756594,164.841285813345">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-69.749996516854,0"
+              EndConnector="-87.2499962560835,0"
               Start="0,0"
-              End="-62.249996516854,0">
+              End="-79.7499962560835,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-62.249996516854,0" />
+                    End="-79.7499962560835,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-79.316384977177,5,96.3827734375,11.609375"
+              BoundingBox="-88.0663848467917,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Fuzzy Lookup Output]"
-          TopLeft="415.624993806705,150.383331276079">
+          TopLeft="415.624993806705,161.291286127163">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.2916630065686,0"
+              EndConnector="-76.7916628203042,0"
               Start="0,0"
-              End="-56.7916630065686,0">
+              End="-69.2916628203042,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-56.7916630065686,0" />
+                    End="-69.2916628203042,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14357,18 +14208,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output1]"
-          TopLeft="607.499990947545,152.983331229587">
+          TopLeft="941.999987185002,75.9996211167605">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-39.87499714084,0"
+              EndConnector="8.08333290492544,69.1333313341944"
               Start="0,0"
-              End="-32.37499714084,0">
+              End="8.08333290492544,61.6333313341944">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-32.37499714084,0" />
+                    End="0,30.5666656670972" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5666656670972"
+                    Point2="0,34.5666656670972"
+                    Point3="4,34.5666656670972" />
+                  <mssgle:LineSegment
+                    End="4.08333290492544,34.5666656670972" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.08333290492544,34.5666656670972"
+                    Point2="8.08333290492544,34.5666656670972"
+                    Point3="8.08333290492544,38.5666656670972" />
+                  <mssgle:LineSegment
+                    End="8.08333290492544,61.6333313341944" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14377,11 +14240,57 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Sharepoint_Oata.Paths[Derived Column Output]"
+          TopLeft="637.49999050051,162.916286098106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69.8749966938052,0"
+              Start="0,0"
+              End="-62.3749966938052,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-62.3749966938052,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Sharepoint_Oata.Paths[BorrFirstorLastName_NotTest]"
+          TopLeft="565.247152992651,55.481186755775">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82.139200996904,0"
+              Start="0,0"
+              End="74.639200996904,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="74.639200996904,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-28.236786220298,5,131.1127734375,10.7841796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination 1">
+    design-time-name="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14394,7 +14303,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Sharepoint_Oata\Fuzzy Lookup 1">
+    design-time-name="Package\Data Flow Task_Sharepoint_Oata\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14412,7 +14321,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

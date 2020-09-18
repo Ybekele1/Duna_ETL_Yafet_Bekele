@@ -3,8 +3,14 @@
   DTS:ObjectName="STGQL_Des.ConnMngr.STGQL"
   DTS:DTSID="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
   DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="Password">@[$Project::STGQL_DesConnMngrSTGQL_Password]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=DESKTOP-04FDTDC;Initial Catalog=STGQL;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=DESKTOP-04FDTDC;Initial Catalog=STGQL;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAACUdo0+8y29TUMG8g4RyJj71sD69XEDgh6HeeOEJ75xxQAAAAAOgAAAAAIAACAAAAC0VQUharBLNqdQJwBIIUJjKOtCXyaoC2/2o4yAYhYSmoAAAABBIN4pHYUfxJCEK/7kt+Zh/kg3y6pEit+JO1e/IgDqyv8C4xxifMfAdo/mjj0YwRFP+U1mi+mqkde+qGl55ihNJrGsBMAuWqay7gjKqBBC3VhCFqUiIEd9mjzBIjIu6V3rIhDOP66Sj6KHEt1BbC3QJde71s0kRv7GtqIUlcRXvEAAAABdd3/YusQ1krsVreTfgF4ZffO/OAcLDeycfguuFRbtIfyvxPqOZSJGVIA/nhSvgMDVdGaLpCUXL6Dpu3Ee5nbm</DTS:Password>
+    </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
