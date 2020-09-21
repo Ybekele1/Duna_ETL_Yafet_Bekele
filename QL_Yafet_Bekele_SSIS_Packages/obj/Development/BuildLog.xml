@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>QL_Yafet_Bekele_SSIS_Packages</Name>
-    <LastWriteTime>2020-09-19T02:04:28.5137609Z</LastWriteTime>
+    <LastWriteTime>2020-09-21T01:52:38.2226707Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -19,11 +19,6 @@
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_LendingWise.dtsx</Name>
       <LastWriteTime>2020-08-28T21:43:42.8038626Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Pkg_Yafet_Bekele_SimpleNexus.dtsx</Name>
-      <LastWriteTime>2020-08-28T21:43:19.2413253Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -48,7 +43,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_LendingPad.dtsx</Name>
-      <LastWriteTime>2020-09-21T00:47:47.98459Z</LastWriteTime>
+      <LastWriteTime>2020-09-21T02:38:24.2382107Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Pkg_Yafet_Bekele_SimpleNexus.dtsx</Name>
+      <LastWriteTime>2020-09-21T01:52:38.1565372Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
