@@ -80,7 +80,7 @@
         SSIS:Name="Sensitive">1</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Value"
-        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAAGOjI9NYfBlY5TWzu6b3ERsBhrbFHfNh3Ve2qirHbODQAAAAAOgAAAAAIAACAAAABR38zwUzv0hDQ0wW2F8Slx2djk/6u/FgZBtWYk3kuqbIAAAABRTwr1QCwXUedM5KAJVUClv1OpuzZePTTOEMtoeicgmMQIX4XO3AwLCzg5rxHVyfCOtdTZ/yMCIzt+XtnOSEvRvi8HdJsJxidaQjD78hPPSdxoduIlpkVXZuOPLBrfVKlOLPsvBRI6EUVygOJtmkvsQY5DbsBXPqrlVQpSZAflRkAAAAAv8TPtkZU2os4NSvncMfCbsBsvpbxKB3aAqOv72JD/sEZVhwGFE9+2EYoWZhHMs+qX1L6CnZwk2AOlhCDANRJQ</SSIS:Property>
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAAEdhb6iOP55lY/n1MgrQsHS+EPM4CtpaodLdmkwRu/hQAAAAAOgAAAAAIAACAAAABOJDRvJrCwwKqXBt5lmLBlvJ9ISsYAtJfuh5KxTT4Ie4AAAAATspMRt65lcLtJwvyrO0r8UywrKGNRllW7dFnCRkR4Dh6mRXMWru3um1HabpDWl0V92WQLPeH5c1jZA3bpYRWFGktVdy7cc4Bc4jL70khKweJsSry0I4tl97NsOCjhk1TNdb+ix+Xk0OTJ4ktaNTtlQ3as+svBNBqeq4Fx1qNVFUAAAADbjQyczWL9nHq24LcwEBHSBPt1Aut3t7+2FanXjiDB40zW7M79e9Sm2YJFJ81SFSF6zmStcEc8iwWlbiv/LUc2</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -102,7 +102,7 @@
         SSIS:Name="Sensitive">1</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Value"
-        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAAgjG3tljEC2BPgxRy970WzcJqqqLuTarGVZEhYNvoLCQAAAAAOgAAAAAIAACAAAAD8nOTstH0M1zZpqUrnYzjtqUuF9NT4wlUe5UhEdRu8+YAAAADvydA7FmlfoYSvYP2u2zd94pPyp6jzDnJOqgUhN3nQSLPzwiRcCtXI8kCszWEM1J/5kn6J/A5a+RaCFNc8ImUAn87NPDSmNj6iAACPSWHvy7SIeduyApC4FZAnsf7Jwie6y6LAqYV67xl07H7UErLcBNUFFd03rbOvpZVwmvraq0AAAACtsHT1+YHkpGXSLJ4T02t4LhnppBlt1RH1lkKqBq6IckQ8AzK2KRaWJkb7AfkycG37imA6LtrHKsHJy0nXMo6J</SSIS:Property>
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAAyFhcUu4Fv2n9QzT6sjM32ZmAi5jtiZXqAkJnHJMAZSAAAAAAOgAAAAAIAACAAAAC3oeGfvw1D81kKu42wViq6fzl0SVt9ltlS0G7+jKbCp4AAAACAn/r3Fo4IYflzelOYXyiXRg5kkQnFKcSUm5QT4ei+aEcUbtjya3klGoGD9oX+1rHAf7L6KtjPccEQWu04Rpk/HMvZ/F5o8AeedrWftUWNVfufEAedNfdhalhZABc1casqA7satgUpKCCDuhCA4qCkN+S/s5g60orDRZv4TEd5CEAAAACFSLsNb9p+4aIOWdDhQFEs0JNlxlH/qMA0xqwofLjhr/9+tsjVrLJ+rx1Xq+wfHRC4Ao+noxxz9k4m2/LLLJ2B</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -145,7 +145,50 @@
         SSIS:Name="Sensitive">1</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Value"
-        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAAq0PQEMxL1SPuuEtj7HjWAtVIgA2PlXI840ZOZQZnbbAAAAAAOgAAAAAIAACAAAABbFpD9xqdP9GgeZYPI6sxYDoJM7PQO/9zbXMZwnd6sz5AAAAC6eb264gUD8ulj/1aAbnb1zNmjqpxKPyLhtn6sqwOKnW8rLU5HL1qyOlxu/9jYYOsmObrTE8NAynGs7Yftk/Y63KC/FE7MkGzOHUdSqd4qeqTf+u9J3HqCAVoZJRSDN8ThuVfw9mva9a54azaWJdM5HYNWzNTfh/PmentiAFL2JNHn8gq4ieD6C2rIzW6SvgZAAAAAJ6ZGoknANo3WgL8pM+TakglqDXWJyINP+5r5UFEKcVmem1Cx3vxgKWz4Mv2wL5usfa/w+j+bBF0WdKCV018bNQ==</SSIS:Property>
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAABqL9vZczrtFwROwXEH5vggqG/8QHWybkXLTERv96SxdQAAAAAOgAAAAAIAACAAAADVFsgccFPhlqmR1kVeV3K572Aa3aZnYW7EbmPDGvgDKpAAAAAF8jZ1l9hQYKp/0yc6GAs1M2D0DF5+RxypWauqzZ2x2S1nwJK+378ODMUoJ3JcbgHcALNoVkXJ7UVI9j45+dvY+lRPsmS/R70fMyieYRxOYpzSGeJuMtCd7Fb5BN61CBADl/4bEmPFAavF7LTGYTr2fnEnjZHemdixCFMG4qYoTxZbij94FN0V3bEGuudKABNAAAAAiSSrxhTlnC7TyZ8ZbSvm56V0FkAYvcX5fyf2lsPE8ZVPlV9FnKg7plN3I5b5cTILeV4jYLGb/Q/Kk2mmQckcRA==</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="FTPConnectionManager_ServerPassword1">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{fc75eed5-b544-4b31-ad93-5ff5c50111f9}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value"
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAADR4tkF5D7FRLmyvxWpqA9QhkzvZGltpTtNPjNmK1UbIAAAAAAOgAAAAAIAACAAAADw866XSO0VIVDhkvvfq8nSmUwKlNJtl0Kxjl9SiCSS8JAAAADvF2p+6NXlOPTxyJID/o4V/jqOB3+a0B85MFzWCT7pYrFPjobGFn+CIe6l0H2o9rXZu4ur0QAZNs8kY3qHn4Cj4UZ8t4WvUKDuKma0YP9HsYKLFjbNqm0nP2aaun9m3Di9ROBFlfgiY1nfAWXY2hLfJAqBTjZ+sVmf/15QirZVQrAElvGHcyduP9+d9SqDKsNAAAAAksk3OZsb82jkrCCcJSnpbNulolsqihiPQYfX26YakhQ0GW3ia/oviIr7iN2gmBnNP7x1GUQh5M3G7vraPmtXVg==</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="FTPConnectionManager_ConnectionString1">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{0f6b5217-776a-4ba4-bcfd-1a712a06cbc5}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">ftp.drivehq.com:21</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
