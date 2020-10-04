@@ -5,18 +5,155 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-04FDTDC"
   DTS:CreatorName="DESKTOP-04FDTDC\yafet"
+  DTS:DelayValidation="True"
   DTS:DTSID="{F612BC90-A686-4833-9BB0-79FBA498134D}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_Yafet_Bekele_Quicken_Loans_Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{8EA48FD2-7E6E-4770-B513-B2551CEABEFB}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{A1E1636A-D57D-4F12-86A1-927864748BB6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{DBAE595D-FA0E-4D2F-969D-457EF81AA259}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\LendingPad"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2218A1FA-64F1-4BB7-8025-673AC4A25563}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LendingPad"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{276B7714-1402-4509-9711-DED10E9BBF48}"
+              SQLTask:SqlStatementSource="declare @output_execution_id bigint&#xA;exec dbo.execute_Execute_LendingPad @output_execution_id output" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\LendingQB"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{74DFAD02-6F97-467A-BCB9-723D49DB4C44}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LendingQB"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{276B7714-1402-4509-9711-DED10E9BBF48}"
+              SQLTask:SqlStatementSource="declare @output_execution_id bigint&#xA;exec dbo.execute_Execute_LendingQB @output_execution_id output" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\QuickenLoans"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{D171D0D8-4E75-4C56-9CE4-56031813F8C6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="QuickenLoans"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{276B7714-1402-4509-9711-DED10E9BBF48}"
+              SQLTask:SqlStatementSource="declare @output_execution_id bigint&#xA;exec dbo.execute_Execute_QuickenLoan @output_execution_id output" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\SimpleNexus"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3CB53A14-ADED-42C0-A5E6-91C88EF2E854}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SimpleNexus"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{276B7714-1402-4509-9711-DED10E9BBF48}"
+              SQLTask:SqlStatementSource="declare @output_execution_id bigint&#xA;exec dbo.execute_Execute_SimpleNexus @output_execution_id output" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\UberWriter"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6D65F42D-A6BD-490D-A65B-3B02C829821C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="UberWriter"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{276B7714-1402-4509-9711-DED10E9BBF48}"
+              SQLTask:SqlStatementSource="declare @output_execution_id bigint&#xA;exec dbo.execute_Execute_UberWriter @output_execution_id output" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{0DC67C99-098B-47F3-B0CC-BA3A88F2D50C}"
+          DTS:From="Package\Sequence Container\LendingQB"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container\QuickenLoans"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{F3E17FC7-8D97-4E74-B3AE-DEC6BA8958BB}"
+          DTS:From="Package\Sequence Container\QuickenLoans"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Sequence Container\UberWriter"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{8DD1A04A-40E2-4039-93E6-A7F2226D6214}"
+          DTS:From="Package\Sequence Container\UberWriter"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Sequence Container\LendingPad"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{82E69273-D5D7-4802-86AF-7ACCB0AE42ED}"
+          DTS:From="Package\Sequence Container\LendingPad"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Sequence Container\SimpleNexus"
+          DTS:Value="2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -24,5 +161,184 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="134,42.6666666666667"
+          Id="Package\Sequence Container\LendingPad"
+          TopLeft="37.9999998509883,193.149996152818" />
+        <NodeLayout
+          Size="130.666666666667,42.6666666666667"
+          Id="Package\Sequence Container\LendingQB"
+          TopLeft="36.124999878928,13.7499993607402" />
+        <NodeLayout
+          Size="145.333333333334,42.6666666666667"
+          Id="Package\Sequence Container\QuickenLoans"
+          TopLeft="28,76.1499982449413" />
+        <NodeLayout
+          Size="140,42.6666666666667"
+          Id="Package\Sequence Container\SimpleNexus"
+          TopLeft="35.4999998882411,257.316664795379" />
+        <NodeLayout
+          Size="131.333333333334,42.6666666666667"
+          Id="Package\Sequence Container\UberWriter"
+          TopLeft="38.624999841675,135.949997175634" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="28,97.4833315782746">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.624999841675,54.0222211529148"
+              Start="0,0"
+              End="3.12499984167499,54.0222211529148">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,50.0222211529148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,50.0222211529148"
+                    Point2="-22.5,54.0222211529148"
+                    Point3="-18.5,54.0222211529148" />
+                  <mssgle:LineSegment
+                    End="3.12499984167499,54.0222211529148" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-47.804453125,-17.609375,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="38.624999841675,163.061108286745">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-0.624999990686661,51.4222211994066"
+              Start="0,0"
+              End="-8.12499999068666,51.4222211994066">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-19.1249999906867,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.1249999906867,0"
+                    Point2="-23.1249999906867,0"
+                    Point3="-23.1249999906867,4" />
+                  <mssgle:LineSegment
+                    End="-23.1249999906867,47.4222211994066" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.1249999906867,47.4222211994066"
+                    Point2="-23.1249999906867,51.4222211994066"
+                    Point3="-19.1249999906867,51.4222211994066" />
+                  <mssgle:LineSegment
+                    End="-8.12499999068666,51.4222211994066" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.4294531156867,-17.609375,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 3]"
+          TopLeft="37.9999998509883,220.261107263929">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-2.49999996274721,58.3888908647827"
+              Start="0,0"
+              End="-9.99999996274721,58.3888908647827">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-20.9999999627472,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.9999999627472,0"
+                    Point2="-24.9999999627472,0"
+                    Point3="-24.9999999627472,4" />
+                  <mssgle:LineSegment
+                    End="-24.9999999627472,54.3888908647827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.9999999627472,54.3888908647827"
+                    Point2="-24.9999999627472,58.3888908647827"
+                    Point3="-20.9999999627472,58.3888908647827" />
+                  <mssgle:LineSegment
+                    End="-9.99999996274721,58.3888908647827" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-50.3044530877472,-17.609375,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="166.791666545595,35.0833326940735">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="6.54166678773873,62.3999988842011"
+              Start="0,0"
+              End="14.0416667877387,62.3999988842011">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="25.0416667877387,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.0416667877387,0"
+                    Point2="29.0416667877387,0"
+                    Point3="29.0416667877387,4" />
+                  <mssgle:LineSegment
+                    End="29.0416667877387,58.3999988842011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.0416667877387,58.3999988842011"
+                    Point2="29.0416667877387,62.3999988842011"
+                    Point3="25.0416667877387,62.3999988842011" />
+                  <mssgle:LineSegment
+                    End="14.0416667877387,62.3999988842011" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="3.73721366273873,-17.609375,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="271.333333333334,374.666666666667"
+          Size="271.333333333334,418"
+          Id="Package\Sequence Container"
+          TopLeft="448.295447865332,0.2267676846337" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

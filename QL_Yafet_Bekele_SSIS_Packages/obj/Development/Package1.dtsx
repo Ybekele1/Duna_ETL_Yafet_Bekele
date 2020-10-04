@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-04FDTDC\yafet"
   DTS:DTSID="{9FC6DFE4-AB96-4B7D-A9C5-7B99DB6D3B63}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{31888A40-5D96-4EA6-AD55-6C6ECCDF6905}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{B5FD9F94-1E28-4099-A3BE-DE5C383C29E4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -370,7 +370,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[MortgageInsuranceCompanyLookup]</property>
+                  name="OpenRowset">[dbo].[MortgageInsuranceCompanyCrossWalk]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -427,36 +427,36 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DcMortgageInsuranceCompany]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MortgageInsuranceCompany]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="128"
-                      cachedName="DcMortgageInsuranceCompany"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DcMortgageInsuranceCompany]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DcMortgageInsuranceCompany]" />
+                      cachedLength="50"
+                      cachedName="MortgageInsuranceCompany"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MortgageInsuranceCompany]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MortgageInsuranceCompany]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DcInsurance_Company]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Insurance_Company]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="128"
-                      cachedName="DcInsurance_Company"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DcInsurance_Company]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[DcInsurance_Company]" />
+                      cachedLength="50"
+                      cachedName="Insurance_Company"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insurance_Company]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Insurance_Company]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DcMortgageInsuranceCompany]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MortgageInsuranceCompany]"
                       codePage="1252"
                       dataType="str"
                       length="128"
-                      name="DcMortgageInsuranceCompany" />
+                      name="MortgageInsuranceCompany" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DcInsurance_Company]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insurance_Company]"
                       codePage="1252"
                       dataType="str"
                       length="128"
-                      name="DcInsurance_Company" />
+                      name="Insurance_Company" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -527,13 +527,13 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="487.499992735684,185.899996675849" />
+        <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="483.749992791563,27.299999511838" />
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="476.249992903322,193.049996547997" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\Derived Column"
@@ -574,18 +574,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="565.41665945823,160.316664562921">
+          TopLeft="571.041659374411,160.316664562921">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.7333319850763"
+              EndConnector="0,25.5833321129283"
               Start="0,0"
-              End="0,25.2333319850763">
+              End="0,18.0833321129283">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.2333319850763" />
+                    End="0,18.0833321129283" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

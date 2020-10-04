@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:ObjectName="FTP Connection Manager"
-  DTS:DTSID="{10848116-E94F-4BF7-81EB-92D3A637B4EC}"
+  DTS:DTSID="{FBA3F403-A4BC-4F30-A3F5-4B113A94C2EC}"
   DTS:CreationName="FTP">
   <DTS:PropertyExpression
-    DTS:Name="ConnectionString">@[$Project::FTPConnectionManager_ConnectionString1]</DTS:PropertyExpression>
+    DTS:Name="ConnectionString">@[$Project::FTPConnectionManager_ConnectionString]</DTS:PropertyExpression>
   <DTS:PropertyExpression
-    DTS:Name="ServerPassword">@[$Project::FTPConnectionManager_ServerPassword1]</DTS:PropertyExpression>
+    DTS:Name="ServerPassword">@[$Project::FTPConnectionManager_ServerPassword]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectionString="ftp.drivehq.com:21">
@@ -16,7 +16,7 @@
         DTS:UsePassiveMode="True">
         <DTS:Property
           DTS:Name="ServerPassword"
-          Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAABErr37jdU2mXDTxVjw4WOuuNXzC/kvx66az6RmkgQS5QAAAAAOgAAAAAIAACAAAACVbZePLwZ6yDsYBc0YqoX85JOAkVnZS7ccPgWxtC3zVZAAAAA+L8ooK4+SOfqnu8mSTtk/MdIwxd9SjFzuYzH8VOG9OZwMshhWVfmondm2h7ozh7P0tZnYjS/GvvKzDpjjBhbJlCCAJK1KfDihGq//LLtSTegeWa3LBeuHgYIZmi3kn9qvq2fr4Md8RxEx260Qt1GN1Bw1IsAcjauhtk4xj6vbQHs7CtNIrSaa+gtpvvXBMpZAAAAA/U1l2DBkCn4RyVEXSr0h6IUrrf8NgffvLbdBzPjSGupvB+pnGzBqQxaRyHwvn9KQMIWfjKYNv1fa9Sy1qJyIvQ==</DTS:Property>
+          Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAA1KJFhGwSh2CdoRFFSTEfCAW3IN8v5nTXxzuHGp9W82gAAAAAOgAAAAAIAACAAAAAKRO0U1ngLvv3ayolnZBtp6OGJpLiEzZ/fUVITdRw7goAAAACK5Vx1fGHbBDRVD5WfwWiJFYJnbwwS1aTWDEVGM80qjuII/FXMXi25Uydc9ectOgC4vAyM90n1Y3sIyqXsgvDwgfhJhSWiuEIxhEirbIe52xOZ1Cs3aj74ORAowqwmrD3zy3RJrJebX2nM/LjOUV0ack/o+IqvjO6hyXalBaQWk0AAAABg4G2uetOUBJqTwWJIYETMcx9DTI20pkb0r8GMSqiq82xP+IkRoS8YJsWs9uz9Q8FbGxEAAJR1Vex/g60+GDEO</DTS:Property>
       </DTS:FtpConnection>
     </DTS:ConnectionManager>
   </DTS:ObjectData>

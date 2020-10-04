@@ -9,10 +9,10 @@
     DTS:Name="Password">@[$Project::DunaDatabaseWindowsNetUberWriterUberWriter_Password]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=Duna.database.windows.net;User ID=UberWriter;Initial Catalog=UberWriter;Persist Security Info=True;Application Name=SSIS-Pkg_Yafet_Bekele_QuickenLoan-{F075FB68-B427-4C98-8C7A-759ACA0149AB}Duna.database.windows.net.UberWriter.UberWriter;">
+      DTS:ConnectionString="Data Source=Duna.database.windows.net;User ID=UberWriter; Initial Catalog=UberWriter;Persist Security Info=True;Application Name=SSIS-Pkg_Yafet_Bekele_QuickenLoan-{F075FB68-B427-4C98-8C7A-759ACA0149A;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAACFbSyBg23SrfPBMyDCrAWHoJsZvG3gDtji9jn6HaMetwAAAAAOgAAAAAIAACAAAABjWrr+rx5FcVtXIaHHEaSP6dIjRqJJ6rTgYV/m2THIyoAAAACCCPt3Cke/UDCz9wrP5AhtkRNCruAryk5ihkpIVxRJSn6mXvttB3LlXppfuMS214/rd4TwCNSdCanB8WlLMQAvJzEF/ilf2t1wIcsF05fRX4Lo7bxDad0lB5U+TCKsAjYQNe2gwRIH6QNOEUfsIW1tSPy3Q8Swrmbp9Wlf3WGA2kAAAABhcV5dIdHIVgAnp2JGHSwCJ2e8CthNAHAtJqD37nXHaf2yWoqwDDgMPE+UaOe5AS4XTh6WhpNSzO7mAA0kZjZ5</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0rNg3DIJtk2RgAbKijfvnwAAAAACAAAAAAAQZgAAAAEAACAAAAC4/zMEo/WlXi9UltBh0IY64bTdo3/rkIrF1fOMnXd7/wAAAAAOgAAAAAIAACAAAACiDDRlK75cmmA0QMLH79YfLqc3Sf9/9hjqd3+udJHSsYAAAAAQkmfKnxT/8lA9qa5++okWVn/wgj9CXot4Rqo/AmQd2YlW59SjhKyL2kvU7f/6vKSxGfqtTQcX7PvbR2Iq2j/hLHt9AmmJ5N8dXIDtt1H+1lAo4D5lMAWESPxP4ktFGiJfxmi2RN9nkAsT8iQaBfWOXu9Krtu3uELCz1izTH3ew0AAAACtk0hIxb2O1SuAKE22OKalh/rDrWOFhILoN7IyrHeahKEFjput3jl5WQBGzevP7uf6TMPuCqzJiQ9itRk8dxaE</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

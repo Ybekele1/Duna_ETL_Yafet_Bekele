@@ -5,14 +5,15 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-04FDTDC"
   DTS:CreatorName="DESKTOP-04FDTDC\yafet"
+  DTS:DelayValidation="True"
   DTS:DTSID="{A1B66D21-A69E-4625-ACE0-C8DD147B8E04}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_Yafet_Bekele_QuickenLoan"
   DTS:PackageType="5"
-  DTS:VersionBuild="205"
-  DTS:VersionGUID="{EE034D1D-53A2-486B-B3EB-63FB2080E155}">
+  DTS:VersionBuild="224"
+  DTS:VersionGUID="{0976C401-BF82-4D41-B197-7D6E0E04BF92}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,6 +50,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{D7A016A8-54A5-43D6-8652-2BA44F5A5690}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varGetMaxModifiedDate">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve">	</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{10A630F1-D5E8-4398-8CC5-8E16FAB543E4}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -59,11 +70,11 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{33EBB371-BB29-476F-B239-1187C4EF3D5B}"
-      DTS:IncludeInDebugDump="6789"
+      DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varLastModifiedDate">
       <DTS:VariableValue
-        DTS:DataType="7">9/5/2020 9:42:14 PM</DTS:VariableValue>
+        DTS:DataType="7">9/29/2000 7:47:08 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -138,7 +149,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varTimeStamp">
       <DTS:VariableValue
-        DTS:DataType="7">9/16/2020 2:32:15 PM</DTS:VariableValue>
+        DTS:DataType="7">9/30/2020 6:21:51 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -154,6 +165,7 @@
     <DTS:Executable
       DTS:refId="Package\Data Flow Task_UberWriter"
       DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{809121E5-6778-41C0-B4E8-3D9556AAD813}"
       DTS:ExecutableType="Microsoft.Pipeline"
@@ -2041,26 +2053,26 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task_UberWriter\Conditional Split 1"
+              refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split 1"
+              name="BorrFirstLastName_NotTest"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input]"
+                  refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input].Columns[BorrFirstName]"
+                      refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input].Columns[BorrFirstName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="BorrFirstName"
                       lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrFirstName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input].Columns[BorrLastName]"
+                      refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input].Columns[BorrLastName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="BorrLastName"
@@ -2071,13 +2083,13 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[BorrFirstorLastName_NotTest]"
+                  refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[BorrFirstorLastName_NotTest]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="BorrFirstorLastName_NotTest"
-                  synchronousInputId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input]"
+                  synchronousInputId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
@@ -2099,11 +2111,11 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[Conditional Split Default Output]"
+                  refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -2112,23 +2124,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[Conditional Split Error Output]"
+                  refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3535,6 +3547,95 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task_UberWriter\IncrementalLoad"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="IncrementalLoad"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Inputs[Conditional Split Input].Columns[LastModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LastModifiedDate"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Keep]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Keep"
+                  synchronousInputId="Package\Data Flow Task_UberWriter\IncrementalLoad.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(DT_DBDATE)#{Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastModifiedDate]} &gt; (DT_DBDATE)@[User::varLastModifiedDate]</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(DT_DBDATE)LastModifiedDate &gt; (DT_DBDATE)@[User::varLastModifiedDate]</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task_UberWriter\IncrementalLoad.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task_UberWriter\IncrementalLoad.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task_UberWriter\MarketSourceNameLookUp"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -3722,7 +3823,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                   dataType="System.String"
                   description="Specifies the name of the reference table or view against which to match incoming records."
                   name="ReferenceTableName"
-                  state="escaped">_x005B_dbo_x005D_._x005B_MortgageInsuranceCompanyLookup_x005D_</property>
+                  state="escaped">_x005B_dbo_x005D_._x005B_MortgageInsuranceCompanyCrossWalk_x005D_</property>
                 <property
                   dataType="System.Int32"
                   description="Indicates whether to drop an existing fuzzy-match index table if transformation is configured to generate a new table and a table with the same name already exists."
@@ -3748,7 +3849,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                   dataType="System.String"
                   description="Specifies the metadata of the reference table in XML format."
                   name="ReferenceMetadataXml"
-                  state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_DcMortgageInsuranceCompany_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_128_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_DcInsurance_Company_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_128_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
+                  state="escaped">_x003C_referenceMetadata_x003E__x003C_referenceColumns_x003E__x003C_referenceColumn_x0020_name_x003D__x0022_MortgageInsuranceCompany_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_128_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C_referenceColumn_x0020_name_x003D__x0022_Insurance_Company_x0022__x0020_dataType_x003D__x0022_DT_STR_x0022__x0020_length_x003D__x0022_128_x0022__x0020_precision_x003D__x0022_0_x0022__x0020_scale_x003D__x0022_0_x0022__x0020_codePage_x003D__x0022_1252_x0022__x002F__x003E__x003C__x002F_referenceColumns_x003E__x003C__x002F_referenceMetadata_x003E__x000D__x000A_</property>
                 <property
                   dataType="System.Boolean"
                   description="If true, each input record will be directly compared against EVERY record in the reference table.  This may produce slightly better results, but will be extremely slow unless the number of records in the reference table is very small.  Note that the entire reference table will be loaded into main memory if this option is enabled.  This option is primarily intended for debugging purposes and should be used with care."
@@ -7746,7 +7847,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                           dataType="System.String"
                           description="Name of the reference table column with which the input column should be matched."
                           name="JoinToReferenceColumn"
-                          state="escaped">DcMortgageInsuranceCompany</property>
+                          state="escaped">MortgageInsuranceCompany</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies whether the match is a fuzzy or an exact match."
@@ -7760,7 +7861,7 @@ where [refTable].[MarketSourceCode] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
                           name="FuzzyComparisonFlags"
-                          typeConverter="tcComparisonFlags">0</property>
+                          typeConverter="tcComparisonFlags">1</property>
                         <property
                           dataType="System.UInt32"
                           description="Flags to FoldString that should be used when comparing whether two strings are equivalent."
@@ -11394,20 +11495,19 @@ where [refTable].[MarketSourceCode] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[DcInsurance_Company]"
+                      refId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[Insurance_Company]"
                       codePage="1252"
                       dataType="str"
                       length="128"
-                      lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[DcInsurance_Company]"
-                      name="DcInsurance_Company">
+                      lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[Insurance_Company]"
+                      name="Insurance_Company">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the reference table column that is copied to the output for each match result."
                           name="CopyFromReferenceColumn"
-                          state="escaped">DcInsurance_Company</property>
+                          state="escaped">Insurance_Company</property>
                         <property
-                          containsID="true"
                           dataType="System.Null"
                           description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                           name="SourceInputColumnLineageID" />
@@ -11445,11 +11545,11 @@ where [refTable].[MarketSourceCode] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[_Similarity_DcMortgageInsuranceCompany]"
+                      refId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[_Similarity_MortgageInsuranceCompany]"
                       dataType="r4"
                       description="Column-level similarity score for fuzzy join on column &quot;Dc_MortgageInsuranceCompany&quot;."
-                      lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[_Similarity_DcMortgageInsuranceCompany]"
-                      name="_Similarity_DcMortgageInsuranceCompany">
+                      lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[_Similarity_MortgageInsuranceCompany]"
+                      name="_Similarity_MortgageInsuranceCompany">
                       <properties>
                         <property
                           dataType="System.Null"
@@ -12078,14 +12178,6 @@ where [refTable].[MarketSourceCode] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[UnderwriterFullName]"
                       lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[Dc_Underwriter_Name]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[DcInsurance_Company]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="128"
-                      cachedName="DcInsurance_Company"
-                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Dc_InsuranceCompany]"
-                      lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[DcInsurance_Company]" />
-                    <inputColumn
                       refId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Dc_AmortizationType]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -12297,6 +12389,14 @@ where [refTable].[MarketSourceCode] = ?</property>
                       cachedName="Dc_BorrEmailAddress"
                       externalMetadataColumnId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[BorrEmailAddress]"
                       lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[Dc_BorrEmailAddress]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Insurance_Company]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="128"
+                      cachedName="Insurance_Company"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceCompany]"
+                      lineageId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output].Columns[Insurance_Company]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -12837,11 +12937,11 @@ where [refTable].[MarketSourceCode] = ?</property>
                       length="100"
                       name="MarketSourceName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Dc_InsuranceCompany]"
+                      refId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceCompany]"
                       codePage="1252"
                       dataType="str"
                       length="128"
-                      name="Dc_InsuranceCompany" />
+                      name="InsuranceCompany" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -12903,14 +13003,14 @@ where [refTable].[MarketSourceCode] = ?</property>
           <paths>
             <path
               refId="Package\Data Flow Task_UberWriter.Paths[ADO NET Source Output]"
-              endId="Package\Data Flow Task_UberWriter\Conditional Split 1.Inputs[Conditional Split Input]"
+              endId="Package\Data Flow Task_UberWriter\IncrementalLoad.Inputs[Conditional Split Input]"
               name="ADO NET Source Output"
               startId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output]" />
             <path
               refId="Package\Data Flow Task_UberWriter.Paths[BorrFirstorLastName_NotTest]"
               endId="Package\Data Flow Task_UberWriter\Row Count.Inputs[Row Count Input 1]"
               name="BorrFirstorLastName_NotTest"
-              startId="Package\Data Flow Task_UberWriter\Conditional Split 1.Outputs[BorrFirstorLastName_NotTest]" />
+              startId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Outputs[BorrFirstorLastName_NotTest]" />
             <path
               refId="Package\Data Flow Task_UberWriter.Paths[Derived Column Output]"
               endId="Package\Data Flow Task_UberWriter\MarketSourceNameLookUp.Inputs[Lookup Input]"
@@ -12926,6 +13026,11 @@ where [refTable].[MarketSourceCode] = ?</property>
               endId="Package\Data Flow Task_UberWriter\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Fuzzy Lookup Output"
               startId="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany.Outputs[Fuzzy Lookup Output]" />
+            <path
+              refId="Package\Data Flow Task_UberWriter.Paths[Keep]"
+              endId="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest.Inputs[Conditional Split Input]"
+              name="Keep"
+              startId="Package\Data Flow Task_UberWriter\IncrementalLoad.Outputs[Keep]" />
             <path
               refId="Package\Data Flow Task_UberWriter.Paths[Lookup Match Output]"
               endId="Package\Data Flow Task_UberWriter\Derived Column 1.Inputs[Derived Column Input]"
@@ -13004,6 +13109,7 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:refId="Package\Execute SQL Task_Delete_Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{4B2DB299-B84D-4BEE-9D7D-A3B6002A379E}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -13014,38 +13120,46 @@ where [refTable].[MarketSourceCode] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
-          SQLTask:SqlStatementSource="Delete from STG_Yafet_Bekele_QL " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="Delete from STG_Yafet_Bekele_QL &#xA;where SourceName= 'UberWriter'  " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task_MaxModifiedDate"
+      DTS:refId="Package\Execute SQL Task_MaxModifiedDate 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{73E4E6F2-27CC-4B07-96C2-E62F593DF377}"
+      DTS:DTSID="{3a5dd62a-6d3c-4545-b8bf-36e526636089}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task_MaxModifiedDate"
+      DTS:ObjectName="Execute SQL Task_MaxModifiedDate 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
-          SQLTask:SqlStatementSource="SELECT MAX(LastModifiedDate) AS MaxLastModifiedDate&#xA;, SourceName    FROM  [dbo].[Stg_Yafet_Bekele_QL]    &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;Where SourceName=?&#xA;Group by SourceName"
+          SQLTask:SqlStatementSource="IF EXISTS (   SELECT &#xA;                    MAX(LastModifiedDate) AS MaxLastModifiedDate&#xA;                      FROM  [dbo].[Stg_Yafet_Bekele_QL] &#xA;where SourceName= 'UberWriter'        &#xA;      )&#xA;   BEGIN&#xA;  SELECT&#xA;MAX(LastModifiedDate) AS MaxLastModifiedDate&#xA;  FROM  [dbo].[Stg_Yafet_Bekele_QL]&#xA;where SourceName= 'UberWriter'     &#xA;  &#xA;  END&#xA;  ELSE&#xA;  BEGIN&#xA;  SELECT DATEADD(YYYY,-4,GETDATE()) AS MaxLastModifiedDate&#xA;  END"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="SourceName"
-            SQLTask:DtsVariableName="User::varSourceName" />
           <SQLTask:ResultBinding
             SQLTask:ResultName="MaxLastModifiedDate"
             SQLTask:DtsVariableName="User::varLastModifiedDate" />
-          <SQLTask:ParameterBinding
-            SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="User::varSourceName"
-            SQLTask:ParameterDirection="Input"
-            SQLTask:DataType="129"
-            SQLTask:ParameterSize="-1" />
         </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TakingCareOfNullBusiness"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9ff8604f-ea0c-47ad-996f-b2b78edabd2a}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TakingCareOfNullBusiness"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D52054DD-FA57-4A35-87BE-7792BAC61730}"
+          SQLTask:SqlStatementSource="&#xA;if exists&#xA;(select 1&#xA; From [dbo].[Stg_Yafet_Bekele_QL]&#xA;&#xA;Where InsuranceCompany IS NULL&#xA; )&#xA; begin&#xA;Insert into [MortgageInsuranceCompanyCrossWalk] ( [MortgageInsuranceCompany], [Insurance_Company] )&#xA;Select DISTINCT MortgageInsuranceCompany,&#xA; MortgageInsuranceCompany   as InsuranceCompany&#xA;From [dbo].[Stg_Yafet_Bekele_QL]&#xA;&#xA;Where InsuranceCompany IS NULL;&#xA;&#xA;with YafetCTE as &#xA;(&#xA;Select *, ROW_NUMBER() over (partition by MortgageInsuranceCompany order by MortgageInsuranceCompany) as RowNumber &#xA;from MortgageInsuranceCompanyCrossWalk&#xA;)&#xA;delete from YafetCTE where RowNumber &gt;1 &#xA;end" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -13053,19 +13167,19 @@ where [refTable].[MarketSourceCode] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{06D8E8DC-11B6-4AA2-A5C7-38F8764C23E9}"
-      DTS:From="Package\Execute SQL Task_MaxModifiedDate"
+      DTS:DTSID="{DAC269D4-679E-45EB-AD27-BACFA505FB6B}"
+      DTS:From="Package\Execute SQL Task_MaxModifiedDate 1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Execute SQL Task_Delete_Table" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{1E5D0DA0-7999-4E14-9928-1614C7794728}"
+      DTS:DTSID="{7D3C06F5-3635-4DEA-BA07-EEFB4FAFFDB0}"
       DTS:From="Package\Data Flow Task_UberWriter"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Execute SQL Task_ ETLLogTable" />
+      DTS:To="Package\TakingCareOfNullBusiness" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -13074,6 +13188,14 @@ where [refTable].[MarketSourceCode] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Data Flow Task_UberWriter" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{CCB988CE-14D4-42EA-AEF7-557E8178276F}"
+      DTS:From="Package\TakingCareOfNullBusiness"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Execute SQL Task_ ETLLogTable" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -13172,36 +13294,6 @@ where [refTable].[MarketSourceCode] = ?</property>
               Language="CSharp"
               ReadOnlyVariables="System::PackageName,User::varFromEmail,User::varPassword,User::varSmtpClient,User::varSmtpServerPort,User::varSubject,User::varToEmail"
               ReadWriteVariables="System::ErrorCode,System::ErrorDescription,User::varTimeStamp">
-              <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_e68e127c332a48d9972e8626f716e3b5")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_e68e127c332a48d9972e8626f716e3b5")]
-[assembly: AssemblyCopyright("Copyright @  2020")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -13322,6 +13414,35 @@ using System.Runtime.CompilerServices;
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Settings.get_Default():ST_e68e127c332a48d9972e8626f716e3b5.Properties.Sett" +
+    "ings")]
+
+namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
 /* The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -13441,7 +13562,7 @@ namespace ST_e68e127c332a48d9972e8626f716e3b5
                 SmtpServer.Credentials = new System.Net.NetworkCredential(SendMailFrom, Password);
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(email);
-                MessageBox.Show("Email was successfully Sent");
+                //MessageBox.Show("Email was successfully Sent");
             }
             catch (Exception ex)
             {
@@ -13561,7 +13682,7 @@ namespace ST_e68e127c332a48d9972e8626f716e3b5
     <msb:CodeName>ST_71d496f250554f6da0535859ba3d2ce7</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_71d496f250554f6da0535859ba3d2ce7</msb:DisplayName>
-    <msb:ProjectId>{21AF9FD7-2BA7-4309-8866-0834C6CBF31D}</msb:ProjectId>
+    <msb:ProjectId>{817A2563-EC63-41D7-8663-EEB8AE284AD2}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_71d496f250554f6da0535859ba3d2ce7.csproj" />
@@ -13574,34 +13695,35 @@ namespace ST_e68e127c332a48d9972e8626f716e3b5
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_e68e127c332a48d9972e8626f716e3b5")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_e68e127c332a48d9972e8626f716e3b5")]
+[assembly: AssemblyCopyright("Copyright @  2020")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_e68e127c332a48d9972e8626f716e3b5.Properties.Settings.get_Default():ST_e68e127c332a48d9972e8626f716e3b5.Properties.Sett" +
-    "ings")]
-
-namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Settings.settings"
                 Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -13682,15 +13804,15 @@ namespace ST_e68e127c332a48d9972e8626f716e3b5.Properties {
               <BinaryItem
                 Name="ST_71d496f250554f6da0535859ba3d2ce7.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJe9Wl8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAARjMA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPoEdV8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAAjMA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAPQyAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALAyAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAATBMAAAAgAAAAFAAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAACBMAAAAgAAAAFAAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAo
-MwAAAAAAAEgAAAACAAUAzCIAAHAPAAABAAAAAAAAADwyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBQD3AQAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACm8T
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADk
+MgAAAAAAAEgAAAACAAUAwCIAADgPAAABAAAAAAAAAPgxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBQDsAQAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACm8T
 AAAKbxQAAAoKAigQAAAKbxEAAApyIwAAcG8SAAAKbxMAAApvFAAACgsCKBAAAApvEQAACnJJAABw
 bxIAAApvEwAACm8UAAAKDB2NHQAAASUWAigQAAAKbxEAAApyawAAcG8SAAAKbxMAAApvFAAACqIl
 F3KTAABwoiUYAigQAAAKbxEAAApylwAAcG8SAAAKbxMAAApvFAAACqIlGXKTAABwoiUaAigQAAAK
@@ -13698,97 +13820,97 @@ bxEAAApyuwAAcG8SAAAKbxMAAApvFAAACqIlG3KTAABwoiUcAigQAAAKbxEAAApy7QAAcG8SAAAK
 bxMAAApvFAAACqIoFQAACg0CKBAAAApvEQAACnITAQBwbxIAAApvEwAACm8UAAAKEwQCKBAAAApv
 EQAACnI7AQBwbxIAAApvEwAACm8UAAAKEwUCKBAAAApvEQAACnJfAQBwbxIAAApvEwAACm8UAAAK
 KBYAAAoTBnMXAAAKEwcRBHMYAAAKEQdvGQAACgZvGgAAChEHB3MbAAAKbxwAAAoRBwhvHQAAChEH
-CW8eAAAKJREGbx8AAAolBxEFcyAAAApvIQAACiUXbyIAAAoRB28jAAAKco8BAHAoJAAACibeDW8U
-AAAKKCQAAAom3gACKBAAAAoWbyUAAAoqAAEQAAAAAHQBad0BDRAAAAEeAigmAAAKKh4CKCcAAAoq
-rn4BAAAELR5yxwEAcNADAAACKCgAAApvKQAACnMqAAAKgAEAAAR+AQAABCoafgIAAAQqHgKAAgAA
-BCoafgMAAAQqHgIoKwAACioucwgAAAaAAwAABCoAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
-AAAAAAUAbAAAAHQEAAAjfgAA4AQAAJwGAAAjU3RyaW5ncwAAAAB8CwAAPAIAACNVUwC4DQAAEAAA
-ACNHVUlEAAAAyA0AAKgBAAAjQmxvYgAAAAAAAAACAAABVx2iAQkDAAAA+gEzABYAAAEAAAAoAAAA
-BQAAAAYAAAAJAAAAAQAAACsAAAACAAAAEAAAAAEAAAACAAAAAwAAAAQAAAABAAAABQAAAAEAAAAB
-AAAAAADcAwEAAAAAAAYAagLqBAYA+QLqBAYAtgHXBA8AXgUAAAYA4wFxBAYATQJxBAYALgJxBAYA
-4AJxBAYAigJxBAYAowJxBAYA+gFxBAYAFQInAwoAvgJpAwoALwFpAw4AoQDMAwYAmQQbBAYAKwQb
-BAYAmQHXBAYACQYbBAYAugQKBQYAqgRcBA4AaQG2Aw4AygG2Aw4ASwFHBAYAfgHqBAoApANpAxIA
-oAXaABIArQDaAAYAQwMbBAYAAQAbBA4ATwbMAw4AgwTMAw4A4AXMAw4AkgMcBg4AYwYcBhYAewbD
-BRYAMwbDBQYA+gAbBAYAtgAbBAYAkwZxBAAAAABPAAAAAAABAAEAAQAQADwEBwA5AAEAAQAAABAA
-EQVtBU0AAQADAAABEACqBW0FYQADAAcAAwEAAPQFAABFAAQACgARADAEqQARAB8BrQARAJEAsQAG
-BncAtQBWgNgFuABWgP8AuABQIAAAAACGAEIEBgABAGQiAAAAAIYYygQGAAEAbCIAAAAAgxjKBAYA
-AQB0IgAAAACTCLYEvAABAKAiAAAAAJMIBwHBAAEApyIAAAAAkwgTAcYAAQCvIgAAAACWCCcGzAAC
-ALYiAAAAAIYYygQGAAIAviIAAAAAkRjQBNEAAgAAAAEAIQMJAMoEAQARAMoEBgAZAMoECgApAMoE
-EAAxAMoEEAA5AMoEEABBAMoEEABJAMoEEABRAMoEEABZAMoEEABhAMoEEABpAMoEBgCRAMoEBgC5
-AMoEFQDJAMoEBgBxAOwFJwDRAJwFLADZABIEMQDhABcDNwCZAEEDOwDpAAIGPwDxAGMBRQB5AMoE
-BgD5AMoEEAB5AKMESgABAYgAEAAJAcoEEAB5ACIEUAB5ABAGEAB5AIYGEAD5AFoGAQARAcoEVwD5
-ALMFXQD5AAQEZAD5AIwAaQAhAXYGbwDRAEAGAQBxAMoEBgCZAMoEBgAxAcgAdgAxAY8GfwChAMoE
-hQDBAMoEBgAIABQAnwAIABgApAApAHMADAEuAAsA5AAuABMA7QAuABsADAEuACMAFQEuACsAPgEu
-ADMAPgEuADsAPgEuAEMAFQEuAEsARAEuAFMAPgEuAFsAWwFDAGMApABJAHMADAFhAHsApABjAGsA
-pAAbAAMAAQAEAAMAAAC6BNUAAAAnAdoAAAArBt8AAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcABIAA
-AAEAAACGHWuMAAAAAAAAKwAAAAQAAAAAAAAAAAAAAI0AfwAAAAAADwAAAAAAAAAAAAAAlgBKAwAA
-AAAEAAAAAAAAAAAAAACNABsEAAAAAA8AAAAAAAAAAAAAAJYAWAAAAAAABAAAAAAAAAAAAAAAjQDD
-BQAAAAAAAAAAAQAAABsFAAAFAAIAAAAAAABJbnQzMgBTVF9lNjhlMTI3YzMzMmE0OGQ5OTcyZTg2
-MjZmNzE2ZTNiNQBTVF83MWQ0OTZmMjUwNTU0ZjZkYTA1MzU4NTliYTNkMmNlNwA8TW9kdWxlPgBN
-aWNyb3NvZnQuU3FsU2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBBZGQAU2VuZABk
-ZWZhdWx0SW5zdGFuY2UATWFpbE1lc3NhZ2UAVmFyaWFibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0
-VHlwZUZyb21IYW5kbGUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZQBUeXBlAEZhaWx1
-cmUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAFZTVEFSVFNjcmlwdE9i
-amVjdE1vZGVsQmFzZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBQYXJzZQBFZGl0b3JCcm93c2Fi
-bGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0
-cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2Vt
-Ymx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3
-b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2Ny
-aXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQ
-cm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNr
-RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBh
-dGliaWxpdHlBdHRyaWJ1dGUAZ2V0X1ZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25p
-bmcAVG9TdHJpbmcATWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxT
-ZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sATmV0d29ya0NyZWRlbnRpYWwAU2NyaXB0T2JqZWN0
-TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFN5c3RlbS5OZXQuTWFpbABTVF83MWQ0OTZmMjUw
-NTU0ZjZkYTA1MzU4NTliYTNkMmNlNy5kbGwAc2V0X0VuYWJsZVNzbABnZXRfSXRlbQBTeXN0ZW0A
-c2V0X0Zyb20ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9u
-AFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAE1haWxBZGRyZXNzQ29sbGVj
-dGlvbgBFeGNlcHRpb24AZ2V0X1RvAEN1bHR1cmVJbmZvAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0
-b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZp
-Y2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfZTY4ZTEyN2MzMzJhNDhkOTk3MmU4NjI2ZjcxNmUzYjUu
-UHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNUX2U2OGUxMjdj
-MzMyYTQ4ZDk5NzJlODYyNmY3MTZlM2I1LlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0aW5n
-cwBzZXRfQ3JlZGVudGlhbHMAU3lzdGVtLldpbmRvd3MuRm9ybXMAU3VjY2VzcwBNYWlsQWRkcmVz
-cwBnZXRfRHRzAFNjcmlwdFJlc3VsdHMAQ29uY2F0AE9iamVjdABzZXRfU3ViamVjdABTeXN0ZW0u
-TmV0AGdldF9EZWZhdWx0AERpYWxvZ1Jlc3VsdABzZXRfVGFza1Jlc3VsdABTbXRwQ2xpZW50AHNl
-dF9Qb3J0AElDcmVkZW50aWFsc0J5SG9zdABTaG93AE1lc3NhZ2VCb3gAc2V0X0JvZHkAZ2V0X0Fz
-c2VtYmx5AAAhVQBzAGUAcgA6ADoAdgBhAHIAVABvAEUAbQBhAGkAbAAAJVUAcwBlAHIAOgA6AHYA
-YQByAEYAcgBvAG0ARQBtAGEAaQBsAAAhVQBzAGUAcgA6ADoAdgBhAHIAUwB1AGIAagBlAGMAdAAA
-J1MAeQBzAHQAZQBtADoAOgBQAGEAYwBrAGEAZwBlAE4AYQBtAGUAAAMgAAAjUwB5AHMAdABlAG0A
-OgA6AEUAcgByAG8AcgBDAG8AZABlAAAxUwB5AHMAdABlAG0AOgA6AEUAcgByAG8AcgBEAGUAcwBj
-AHIAaQBwAHQAaQBvAG4AACVVAHMAZQByADoAOgB2AGEAcgBUAGkAbQBlAFMAdABhAG0AcAAAJ1UA
-cwBlAHIAOgA6AHYAYQByAFMAbQB0AHAAQwBsAGkAZQBuAHQAACNVAHMAZQByADoAOgB2AGEAcgBQ
-AGEAcwBzAHcAbwByAGQAAC9VAHMAZQByADoAOgB2AGEAcgBTAG0AdABwAFMAZQByAHYAZQByAFAA
-bwByAHQAADdFAG0AYQBpAGwAIAB3AGEAcwAgAHMAdQBjAGMAZQBzAHMAZgB1AGwAbAB5ACAAUwBl
-AG4AdAAAcVMAVABfAGUANgA4AGUAMQAyADcAYwAzADMAMgBhADQAOABkADkAOQA3ADIAZQA4ADYA
-MgA2AGYANwAxADYAZQAzAGIANQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBj
-AGUAcwAAAAAAEnyxKDhqrU+thtD9U0ploQAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQsHCA4O
-Dg4ODggSPQQgABJpBCAAEm0FIAEScRwDIAAcAyAADgUAAQ4dDgQAAQgOBSAAEoCBBiABARKAhQUg
-AgEODgYgAQESgI0EIAEBAgUgAQESPQYAARGAlQ4IAAESgJkRgJ0FIAASgKEHIAIBDhKAoQi3elxW
-GTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJRAwYSVQMGEhACBggDBhEUBAAAElEEAAASVQUAAQES
-VQQAABIQAwAAAQQIABJRBAgAElUECAASEAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlv
-blRocm93cwEIAQACAAAAAAAoAQAjU1RfZTY4ZTEyN2MzMzJhNDhkOTk3MmU4NjI2ZjcxNmUzYjUA
-AAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMAAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12
-NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcAAAC0AAAAzsrv
-vgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJz
-aW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0
-ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBB
-RFC0AAAAHDMAAAAAAAAAAAAANjMAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgzAAAAAAAAAAAA
-AAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA
+CW8eAAAKJREGbx8AAAolBxEFcyAAAApvIQAACiUXbyIAAAoRB28jAAAK3g1vFAAACigkAAAKJt4A
+AigQAAAKFm8lAAAKKgEQAAAAAHQBXtIBDRAAAAEeAigmAAAKKh4CKCcAAAoqrn4BAAAELR5yjwEA
+cNADAAACKCgAAApvKQAACnMqAAAKgAEAAAR+AQAABCoafgIAAAQqHgKAAgAABCoafgMAAAQqHgIo
+KwAACioucwgAAAaAAwAABCoAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAHQE
+AAAjfgAA4AQAAJwGAAAjU3RyaW5ncwAAAAB8CwAABAIAACNVUwCADQAAEAAAACNHVUlEAAAAkA0A
+AKgBAAAjQmxvYgAAAAAAAAACAAABVx2iAQkDAAAA+gEzABYAAAEAAAAoAAAABQAAAAYAAAAJAAAA
+AQAAACsAAAACAAAAEAAAAAEAAAACAAAAAwAAAAQAAAABAAAABQAAAAEAAAABAAAAAADcAwEAAAAA
+AAYAagLqBAYA+QLqBAYAtgHXBA8AXgUAAAYA4wFxBAYATQJxBAYALgJxBAYA4AJxBAYAigJxBAYA
+owJxBAYA+gFxBAYAFQInAwoAvgJpAwoALwFpAw4AoQDMAwYAmQQbBAYAKwQbBAYAmQHXBAYACQYb
+BAYAugQKBQYAqgRcBA4AaQG2Aw4AygG2Aw4ASwFHBAYAfgHqBAoApANpAxIAoAXaABIArQDaAAYA
+QwMbBAYAAQAbBA4ATwbMAw4AgwTMAw4A4AXMAw4AkgMcBg4AYwYcBhYAewbDBRYAMwbDBQYA+gAb
+BAYAtgAbBAYAkwZxBAAAAABPAAAAAAABAAEAAQAQADwEBwA5AAEAAQAAABAAEQVtBU0AAQADAAAB
+EACqBW0FYQADAAcAAwEAAPQFAABFAAQACgARADAEqQARAB8BrQARAJEAsQAGBncAtQBWgNgFuABW
+gP8AuABQIAAAAACGAEIEBgABAFgiAAAAAIYYygQGAAEAYCIAAAAAgxjKBAYAAQBoIgAAAACTCLYE
+vAABAJQiAAAAAJMIBwHBAAEAmyIAAAAAkwgTAcYAAQCjIgAAAACWCCcGzAACAKoiAAAAAIYYygQG
+AAIAsiIAAAAAkRjQBNEAAgAAAAEAIQMJAMoEAQARAMoEBgAZAMoECgApAMoEEAAxAMoEEAA5AMoE
+EABBAMoEEABJAMoEEABRAMoEEABZAMoEEABhAMoEEABpAMoEBgCRAMoEBgC5AMoEFQDJAMoEBgBx
+AOwFJwDRAJwFLADZABIEMQDhABcDNwCZAEEDOwDpAAIGPwDxAGMBRQB5AMoEBgD5AMoEEAB5AKME
+SgABAYgAEAAJAcoEEAB5ACIEUAB5ABAGEAB5AIYGEAD5AFoGAQARAcoEVwD5ALMFXQD5AAQEZAD5
+AIwAaQAhAXYGbwDRAEAGAQBxAMoEBgCZAMoEBgAxAcgAdgAxAY8GfwChAMoEhQDBAMoEBgAIABQA
+nwAIABgApAApAHMADAEuAAsA5AAuABMA7QAuABsADAEuACMAFQEuACsAPgEuADMAPgEuADsAPgEu
+AEMAFQEuAEsARAEuAFMAPgEuAFsAWwFDAGMApABJAHMADAFhAHsApABjAGsApAAbAAMAAQAEAAMA
+AAC6BNUAAAAnAdoAAAArBt8AAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcABIAAAAEAAACaHR2BAAAA
+AAAAKwAAAAQAAAAAAAAAAAAAAI0AfwAAAAAADwAAAAAAAAAAAAAAlgBKAwAAAAAEAAAAAAAAAAAA
+AACNABsEAAAAAA8AAAAAAAAAAAAAAJYAWAAAAAAABAAAAAAAAAAAAAAAjQDDBQAAAAAAAAAAAQAA
+ABsFAAAFAAIAAAAAAABJbnQzMgBTVF9lNjhlMTI3YzMzMmE0OGQ5OTcyZTg2MjZmNzE2ZTNiNQBT
+VF83MWQ0OTZmMjUwNTU0ZjZkYTA1MzU4NTliYTNkMmNlNwA8TW9kdWxlPgBNaWNyb3NvZnQuU3Fs
+U2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBBZGQAU2VuZABkZWZhdWx0SW5zdGFu
+Y2UATWFpbE1lc3NhZ2UAVmFyaWFibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5k
+bGUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZQBUeXBlAEZhaWx1cmUAZ2V0X0N1bHR1
+cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFz
+ZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBQYXJzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21w
+aWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVn
+Z2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRy
+aWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRl
+AEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmli
+dXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmli
+dXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNrRW50cnlQb2ludEF0
+dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRy
+aWJ1dGUAZ2V0X1ZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJpbmcA
+TWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlRh
+c2tzLlNjcmlwdFRhc2sATmV0d29ya0NyZWRlbnRpYWwAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVt
+LkNvbXBvbmVudE1vZGVsAFN5c3RlbS5OZXQuTWFpbABTVF83MWQ0OTZmMjUwNTU0ZjZkYTA1MzU4
+NTliYTNkMmNlNy5kbGwAc2V0X0VuYWJsZVNzbABnZXRfSXRlbQBTeXN0ZW0Ac2V0X0Zyb20ARW51
+bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9i
+YWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAE1haWxBZGRyZXNzQ29sbGVjdGlvbgBFeGNlcHRp
+b24AZ2V0X1RvAEN1bHR1cmVJbmZvAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5
+c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5S
+ZXNvdXJjZXMAU1RfZTY4ZTEyN2MzMzJhNDhkOTk3MmU4NjI2ZjcxNmUzYjUuUHJvcGVydGllcy5S
+ZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNUX2U2OGUxMjdjMzMyYTQ4ZDk5NzJl
+ODYyNmY3MTZlM2I1LlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0aW5ncwBzZXRfQ3JlZGVu
+dGlhbHMAU3lzdGVtLldpbmRvd3MuRm9ybXMAU3VjY2VzcwBNYWlsQWRkcmVzcwBnZXRfRHRzAFNj
+cmlwdFJlc3VsdHMAQ29uY2F0AE9iamVjdABzZXRfU3ViamVjdABTeXN0ZW0uTmV0AGdldF9EZWZh
+dWx0AERpYWxvZ1Jlc3VsdABzZXRfVGFza1Jlc3VsdABTbXRwQ2xpZW50AHNldF9Qb3J0AElDcmVk
+ZW50aWFsc0J5SG9zdABTaG93AE1lc3NhZ2VCb3gAc2V0X0JvZHkAZ2V0X0Fzc2VtYmx5AAAhVQBz
+AGUAcgA6ADoAdgBhAHIAVABvAEUAbQBhAGkAbAAAJVUAcwBlAHIAOgA6AHYAYQByAEYAcgBvAG0A
+RQBtAGEAaQBsAAAhVQBzAGUAcgA6ADoAdgBhAHIAUwB1AGIAagBlAGMAdAAAJ1MAeQBzAHQAZQBt
+ADoAOgBQAGEAYwBrAGEAZwBlAE4AYQBtAGUAAAMgAAAjUwB5AHMAdABlAG0AOgA6AEUAcgByAG8A
+cgBDAG8AZABlAAAxUwB5AHMAdABlAG0AOgA6AEUAcgByAG8AcgBEAGUAcwBjAHIAaQBwAHQAaQBv
+AG4AACVVAHMAZQByADoAOgB2AGEAcgBUAGkAbQBlAFMAdABhAG0AcAAAJ1UAcwBlAHIAOgA6AHYA
+YQByAFMAbQB0AHAAQwBsAGkAZQBuAHQAACNVAHMAZQByADoAOgB2AGEAcgBQAGEAcwBzAHcAbwBy
+AGQAAC9VAHMAZQByADoAOgB2AGEAcgBTAG0AdABwAFMAZQByAHYAZQByAFAAbwByAHQAAHFTAFQA
+XwBlADYAOABlADEAMgA3AGMAMwAzADIAYQA0ADgAZAA5ADkANwAyAGUAOAA2ADIANgBmADcAMQA2
+AGUAMwBiADUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAAFZL
+4Xukha9OnZOJd4Y75ZkABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkLBwgODg4ODg4IEj0EIAAS
+aQQgABJtBSABEnEcAyAAHAMgAA4FAAEOHQ4EAAEIDgUgABKAgQYgAQESgIUFIAIBDg4GIAEBEoCN
+BCABAQIFIAEBEj0GAAERgJUOCAABEoCZEYCdBSAAEoChByACAQ4SgKEIt3pcVhk04IkIiYRdzYCA
+zJEEAAAAAAQBAAAAAwYSUQMGElUDBhIQAgYIAwYRFAQAABJRBAAAElUFAAEBElUEAAASEAMAAAEE
+CAASUQQIABJVBAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEA
+AgAAAAAAKAEAI1NUX2U2OGUxMjdjMzMyYTQ4ZDk5NzJlODYyNmY3MTZlM2I1AAAFAQAAAAAWAQAR
+Q29weXJpZ2h0IEAgIDIwMjAAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJh
+bWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43AAAAtAAAAM7K774BAAAAkQAAAGxT
+eXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4w
+LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVt
+LlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAANgyAAAA
+AAAAAAAAAPIyAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADkMgAAAAAAAAAAAAAAAF9Db3JEbGxN
+YWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
 SAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
-AAAAvQTv/gAAAQAAAAEAa4yGHQAAAQBrjIYdPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAAAvQTv/gAAAQAAAAEAHYGaHQAAAQAdgZodPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
 AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
 AAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAwADAA
 MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
 AABTAFQAXwBlADYAOABlADEAMgA3AGMAMwAzADIAYQA0ADgAZAA5ADkANwAyAGUAOAA2ADIANgBm
 ADcAMQA2AGUAMwBiADUAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-NwA1ADUAOAAuADMANQA5ADQANwAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
+NwA1ADcAOAAuADMAMwAwADUAMwAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
 AFQAXwA3ADEAZAA0ADkANgBmADIANQAwADUANQA0AGYANgBkAGEAMAA1ADMANQA4ADUAOQBiAGEA
 MwBkADIAYwBlADcALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
 AEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMAAAACoAAQABAEwAZQBnAGEAbABUAHIA
@@ -13797,15 +13919,15 @@ AG0AZQAAAFMAVABfADcAMQBkADQAOQA2AGYAMgA1ADAANQA1ADQAZgA2AGQAYQAwADUAMwA1ADgA
 NQA5AGIAYQAzAGQAMgBjAGUANwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
 AAAAAABTAFQAXwBlADYAOABlADEAMgA3AGMAMwAzADIAYQA0ADgAZAA5ADkANwAyAGUAOAA2ADIA
 NgBmADcAMQA2AGUAMwBiADUAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
-AC4AMAAuADcANQA1ADgALgAzADUAOQA0ADcAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
-ZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANQA1ADgALgAzADUAOQA0ADcAAAAAAAAAAAAAAAAAAAAA
+AC4AMAAuADcANQA3ADgALgAzADMAMAA1ADMAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
+ZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANQA3ADgALgAzADMAMAA1ADMAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAASDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAABDMAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -13842,7 +13964,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="209.333333333334,42.6666666666667"
           Id="Package\Data Flow Task_UberWriter"
@@ -13857,22 +13979,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="524.374992186203,42.4499992409349" />
         <NodeLayout
           Size="250.666666666667,42.6666666666667"
-          Id="Package\Execute SQL Task_MaxModifiedDate"
-          TopLeft="517.49999228865,171.74999692887" />
+          Id="Package\Execute SQL Task_MaxModifiedDate 1"
+          TopLeft="514.374992335215,166.466663737695" />
+        <NodeLayout
+          Size="201.333333333334,42.6666666666667"
+          Id="Package\TakingCareOfNullBusiness"
+          TopLeft="191.249997150152,109.26666476051" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="641.604158904093,171.74999692887">
+          TopLeft="640.041658927376,166.466663737695">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-86.633331021268"
+              EndConnector="0,-81.349997830093"
               Start="0,0"
-              End="0,-79.133331021268">
+              End="0,-73.849997830093">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-79.133331021268" />
+                    End="0,-73.849997830093" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13883,30 +14009,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="290.350230415289,91.384090148224">
+          TopLeft="185.683563748622,70.0507568148906">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.534964959938,91.847724757154"
+              EndConnector="5.56643340153045,60.5492412789527"
               Start="0,0"
-              End="11.534964959938,84.347724757154">
+              End="-1.93356659846955,60.5492412789527">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.923862378577" />
+                    End="-18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.923862378577"
-                    Point2="0,45.923862378577"
-                    Point3="4,45.923862378577" />
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="7.53496495993795,45.923862378577" />
+                    End="-22.5,56.5492412789527" />
                   <mssgle:CubicBezierSegment
-                    Point1="7.53496495993795,45.923862378577"
-                    Point2="11.534964959938,45.923862378577"
-                    Point3="11.534964959938,49.923862378577" />
+                    Point1="-22.5,56.5492412789527"
+                    Point2="-22.5,60.5492412789527"
+                    Point3="-18.5,60.5492412789527" />
                   <mssgle:LineSegment
-                    End="11.534964959938,84.347724757154" />
+                    End="-1.93356659846955,60.5492412789527" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13937,6 +14063,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="291.916663816819,151.933331427177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.96853155840756,31.2984834782013"
+              Start="0,0"
+              End="9.96853155840756,23.7984834782013">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.6492417391007" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.6492417391007"
+                    Point2="0,15.6492417391007"
+                    Point3="4,15.6492417391007" />
+                  <mssgle:LineSegment
+                    End="5.96853155840756,15.6492417391007" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.96853155840756,15.6492417391007"
+                    Point2="9.96853155840756,15.6492417391007"
+                    Point3="9.96853155840756,19.6492417391007" />
+                  <mssgle:LineSegment
+                    End="9.96853155840756,23.7984834782013" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -13944,7 +14104,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package.EventHandlers[OnError]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="229.333333333334,42.6666666666667"
           Id="Package.EventHandlers[OnError]\Execute SQL Task_ERROR_LOG"
@@ -13972,9 +14132,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13984,123 +14142,69 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Data Flow Task_UberWriter">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Data Flow Task_UberWriter\Derived Column 1"
           TopLeft="839.374987492338,192.39999655962" />
         <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task_UberWriter\MarketSourceNameLookUp"
+          TopLeft="877.499986924231,65.0499988725782" />
+        <NodeLayout
+          Size="208,42.6666666666667"
+          Id="Package\Data Flow Task_UberWriter\BorrFirstLastName_NotTest"
+          TopLeft="320.624995222315,60.4999989539385" />
+        <NodeLayout
           Size="131.333333333334,42.6666666666667"
           Id="Package\Data Flow Task_UberWriter\Row Count"
-          TopLeft="441.13635706292,74.2460845309636" />
+          TopLeft="536.761355637997,63.8460847169301" />
         <NodeLayout
-          Size="181.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task_UberWriter\OLE DB Destination 1"
-          TopLeft="309.99999538064,205.399996327162" />
-        <NodeLayout
-          Size="165.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task_UberWriter\Conditional Split 1"
-          TopLeft="198.749997038394,74.1499987098575" />
+          Size="154.666666666667,42"
+          Id="Package\Data Flow Task_UberWriter\Derived Column"
+          TopLeft="686.874989764766,66.3499988493324" />
         <NodeLayout
           Size="214.666666666667,42.6666666666667"
           Id="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany"
           TopLeft="568.749991524965,193.049996547997" />
         <NodeLayout
-          Size="154.666666666667,42"
-          Id="Package\Data Flow Task_UberWriter\Derived Column"
-          TopLeft="613.124990863726,70.2499987795949" />
+          Size="181.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task_UberWriter\OLE DB Destination 1"
+          TopLeft="301.874995501712,181.34999675721" />
         <NodeLayout
           Size="158.666666666667,42.6666666666667"
           Id="Package\Data Flow Task_UberWriter\ADO NET Source"
           TopLeft="110.624998351559,16.2499997094274" />
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task_UberWriter\MarketSourceNameLookUp"
-          TopLeft="828.749987650663,63.749998895824" />
-        <EdgeLayout
-          Id="Package\Data Flow Task_UberWriter.Paths[Row Count Output 1]"
-          TopLeft="572.469690396253,93.4147083219459">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40.6553004674728,0"
-              Start="0,0"
-              End="33.1553004674728,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="33.1553004674728,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task_UberWriter.Paths[Lookup Match Output]"
-          TopLeft="932.083320983997,106.416665562491">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.7083334916588,85.9833309971294"
-              Start="0,0"
-              End="-10.7083334916588,78.4833309971294">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.9916654985647" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.9916654985647"
-                    Point2="0,42.9916654985647"
-                    Point3="-4,42.9916654985647" />
-                  <mssgle:LineSegment
-                    End="-6.70833349165878,42.9916654985647" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.70833349165878,42.9916654985647"
-                    Point2="-10.7083334916588,42.9916654985647"
-                    Point3="-10.7083334916588,46.9916654985647" />
-                  <mssgle:LineSegment
-                    End="-10.7083334916588,78.4833309971294" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-53.5455534645794,47.9916654985647,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task_UberWriter\IncrementalLoad"
+          TopLeft="111.249998342246,116.999997907877" />
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[Fuzzy Lookup Output]"
           TopLeft="568.749991524965,214.38332988133">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-77.4166628109917,12.3499997791646"
+              EndConnector="-85.5416626899201,-11.6999997907873"
               Start="0,0"
-              End="-69.9166628109917,12.3499997791646">
+              End="-78.0416626899201,-11.6999997907873">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-34.7083314054959,0" />
+                    End="-38.7708313449601,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-34.7083314054959,0"
-                    Point2="-38.7083314054959,0"
-                    Point3="-38.7083314054959,4" />
+                    Point1="-38.7708313449601,0"
+                    Point2="-42.7708313449601,0"
+                    Point3="-42.7708313449601,-4" />
                   <mssgle:LineSegment
-                    End="-38.7083314054959,8.34999977916465" />
+                    End="-42.7708313449601,-7.69999979078733" />
                   <mssgle:CubicBezierSegment
-                    Point1="-38.7083314054959,8.34999977916465"
-                    Point2="-38.7083314054959,12.3499997791646"
-                    Point3="-42.7083314054959,12.3499997791646" />
+                    Point1="-42.7708313449601,-7.69999979078733"
+                    Point2="-42.7708313449601,-11.6999997907873"
+                    Point3="-46.7708313449601,-11.6999997907873" />
                   <mssgle:LineSegment
-                    End="-69.9166628109917,12.3499997791646" />
+                    End="-78.0416626899201,-11.6999997907873" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14133,18 +14237,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[Derived Column Output]"
-          TopLeft="767.791657530392,88.1666655043761">
+          TopLeft="841.541656431433,86.866665527622">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.9583301202706,0"
+              EndConnector="35.9583304927987,0"
               Start="0,0"
-              End="53.4583301202706,0">
+              End="28.4583304927987,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.4583301202706,0" />
+                    End="28.4583304927987,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14155,48 +14259,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[BorrFirstorLastName_NotTest]"
-          TopLeft="364.083330371727,95.5313749537439">
+          TopLeft="424.624995222315,60.4999989539385">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="77.0530266911923,0"
+              EndConnector="157.247471526793,3.34608576299162"
               Start="0,0"
-              End="69.5530266911923,0">
+              End="157.247471526793,-4.15391423700838">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="69.5530266911923,0" />
+                    End="0,-18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.5"
+                    Point2="0,-22.5"
+                    Point3="4,-22.5" />
+                  <mssgle:LineSegment
+                    End="153.247471526793,-22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="153.247471526793,-22.5"
+                    Point2="157.247471526793,-22.5"
+                    Point3="157.247471526793,-18.5" />
+                  <mssgle:LineSegment
+                    End="157.247471526793,-4.15391423700838" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-30.7798733731539,5,131.1127734375,10.7841796875"
+              BoundingBox="13.0673490446464,-17.5,131.1127734375,10.7841796875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[ADO NET Source Output]"
-          TopLeft="269.291665018226,37.5833330427607">
+          TopLeft="190.270831680236,58.9166663760941">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.1249986868351,36.5666656670968"
+              EndConnector="0,58.083331531783"
               Start="0,0"
-              End="12.1249986868351,29.0666656670968">
+              End="0,50.583331531783">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="8.12499868683506,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.12499868683506,0"
-                    Point2="12.1249986868351,0"
-                    Point3="12.1249986868351,4" />
-                  <mssgle:LineSegment
-                    End="12.1249986868351,29.0666656670968" />
+                    End="0,50.583331531783" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14205,43 +14315,115 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_UberWriter.Paths[Row Count Output 1]"
+          TopLeft="622.983577860219,63.8460847169301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.22474523788,2.50391413240226"
+              Start="0,0"
+              End="141.22474523788,-4.99608586759774">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.5"
+                    Point2="0,-22.5"
+                    Point3="4,-22.5" />
+                  <mssgle:LineSegment
+                    End="137.22474523788,-22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.22474523788,-22.5"
+                    Point2="141.22474523788,-22.5"
+                    Point3="141.22474523788,-18.5" />
+                  <mssgle:LineSegment
+                    End="141.22474523788,-4.99608586759774" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_UberWriter.Paths[Lookup Match Output]"
+          TopLeft="980.833320257565,107.716665539245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.4583327652267,84.6833310203751"
+              Start="0,0"
+              End="-59.4583327652267,77.1833310203751">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.3416655101876" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.3416655101876"
+                    Point2="0,42.3416655101876"
+                    Point3="-4,42.3416655101876" />
+                  <mssgle:LineSegment
+                    End="-55.4583327652267,42.3416655101876" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.4583327652267,42.3416655101876"
+                    Point2="-59.4583327652267,42.3416655101876"
+                    Point3="-59.4583327652267,46.3416655101876" />
+                  <mssgle:LineSegment
+                    End="-59.4583327652267,77.1833310203751" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-77.9205531013634,47.3416655101876,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_UberWriter.Paths[Keep]"
+          TopLeft="269.916665008913,138.33333124121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.7083302134024,-56.4999989539385"
+              Start="0,0"
+              End="43.2083302134024,-56.4999989539385">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.3541651067012,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.3541651067012,0"
+                    Point2="25.3541651067012,0"
+                    Point3="25.3541651067012,-4" />
+                  <mssgle:LineSegment
+                    End="25.3541651067012,-52.4999989539385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.3541651067012,-52.4999989539385"
+                    Point2="25.3541651067012,-56.4999989539385"
+                    Point3="29.3541651067012,-56.4999989539385" />
+                  <mssgle:LineSegment
+                    End="43.2083302134024,-56.4999989539385" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="13.9031885442012,1,22.901953125,11.2822265625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_UberWriter\OLE DB Destination 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_UberWriter\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task_UberWriter\MarketSourceNameLookUp">
     <Properties>
@@ -14260,6 +14442,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <Value
           type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_UberWriter\MortgageInsuranceCompany">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_UberWriter\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_UberWriter\ADO NET Source">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

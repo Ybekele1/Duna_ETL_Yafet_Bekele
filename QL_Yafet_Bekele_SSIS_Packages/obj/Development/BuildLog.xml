@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>QL_Yafet_Bekele_SSIS_Packages</Name>
-    <LastWriteTime>2020-09-24T04:31:32.3196461Z</LastWriteTime>
+    <LastWriteTime>2020-10-02T00:49:53.0963557Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,42 +13,37 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_LendingQB.dtsx</Name>
-      <LastWriteTime>2020-09-20T04:02:47.214748Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Pkg_Yafet_Bekele_LendingWise.dtsx</Name>
-      <LastWriteTime>2020-08-28T21:43:42.8038626Z</LastWriteTime>
+      <LastWriteTime>2020-10-02T01:31:25.574664Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_Quicken_Loans_Master.dtsx</Name>
-      <LastWriteTime>2020-08-28T21:43:50.8811329Z</LastWriteTime>
+      <LastWriteTime>2020-10-02T02:59:27.4879483Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Package1.dtsx</Name>
-      <LastWriteTime>2020-09-05T02:14:05.6594756Z</LastWriteTime>
+      <LastWriteTime>2020-09-25T20:20:03.2396053Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_QuickenLoan.dtsx</Name>
-      <LastWriteTime>2020-09-14T00:14:47.4823585Z</LastWriteTime>
+      <LastWriteTime>2020-09-30T22:20:07.075346Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_UberWriter.dtsx</Name>
-      <LastWriteTime>2020-09-16T21:17:45.3521035Z</LastWriteTime>
+      <LastWriteTime>2020-09-30T22:21:55.3378965Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_LendingPad.dtsx</Name>
-      <LastWriteTime>2020-09-21T18:04:26.5418433Z</LastWriteTime>
+      <LastWriteTime>2020-09-30T22:32:42.7622931Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Pkg_Yafet_Bekele_SimpleNexus.dtsx</Name>
-      <LastWriteTime>2020-09-24T07:04:20.9324392Z</LastWriteTime>
+      <LastWriteTime>2020-10-04T09:48:34.5174279Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
